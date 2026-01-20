@@ -1,12 +1,15 @@
-// Variable declarations with different naming conventions
+// a = 10; // window variable
 var a = "temp";
 var _123 = "value";
 var $123 = "dollar";
 
-// Missing var/let/const - creates global variable (bad practice)
+// var b; // declare
 b = 24;
 
-// let declaration - block scoped
+// // var add value into window
+// // var is function scoped
+// // var can be redeclared and reassigned
+
 let temp = "let temp";
 
 // const declaration - block scoped, cannot be reassigned
@@ -49,13 +52,18 @@ var temp_b = "temp b";
 console.log(temp_c);
 temp_c = "temp c";
 
-// hoisting imapact
+// Hosting Imapct
+// Hostong --> when your create a variable into js that break into two part first is declare part that go to up and there intialization part that go down
 var temp_d = 12;
-// var hoisting impact - redeclaration allowed
-// let prevents redeclaration in same scope
-let temp_d_let = 24;
-// hosting impact on var and let count
 
-// var --> hosting --> can be redeclared
-// let --> hosting --> ReferenceError
-// const --> hosting --> ReferenceError
+//var temp_d; --> undefined; --> that go to up
+// temp_d = 12; --> that go to down
+// if you use console.log before initialization that give you undefined;
+let temp_d_let = 24;
+// let variable not use before initialization
+// if you see console.log before initialization that give you error;
+// hoistinf imapct on var ,  let , const
+
+// var --> hoist --> undefined
+// let --> hoist --> error
+// const --> hoist --> error
