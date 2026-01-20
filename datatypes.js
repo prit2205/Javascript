@@ -53,7 +53,33 @@ let u4 = Symbol("uid");
 
 // bigint:
 // check range of number , Number.Max_SAFE_INTEGER
-let number = 900719925471991;
+let number = 9007199254740991;
 number = number + 10;
-let num2 = 9007199254711991145;
-num2 + 10n; 
+let num2 = 900719925470991n;
+num2 + 8n; 
+
+// <-----Non-Primitive Data Types----->
+// types: arrays [], objects{}, functions ()
+let temp_array = ["user1", "user2", "user3"];
+let temp_obj = { name: "test", age: 9, phone_number: 558998554 };
+let profiles = [
+    { name: "test1", age: 10,  phone_number: 98989775 },
+    { name: "test2", age: 15,  phone_number: 9898889775 },
+    { name: "test3", age: 11,  phone_number: 9898975575 },
+];
+function name(params) {}
+
+// Dynamic Typing
+let u_name = "username";
+u_name = 125;
+u_name = {};
+// javascript --> typescript
+
+// type coeration 
+// "5" + 1 // + --> value Add and Coeration(Mix)
+// "5" - 1
+
+// Truthy VS Falsy Values
+// 0, false, "", null, undefined, NaN, documnet.all, -- false
+// ex. !!0 -- check value is true and false
+// ex. if(null){}. is convert it into false
