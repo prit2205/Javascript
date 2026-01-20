@@ -83,3 +83,5 @@ u_name = {};
 // 0, false, "", null, undefined, NaN, documnet.all, -- false
 // ex. !!0 -- check value is true and false
 // ex. if(null){}. is convert it into false
+// ex. if(-1){}, js convert it into true
+// all --> true
