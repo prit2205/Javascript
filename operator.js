@@ -84,3 +84,7 @@ console.log("The number is:", parity);
 // typeof NaN --> number
 // typeof --> primitive data type mate use thay che
 // instanceof --> reference data type mate use thay che
+// instanceof operator example
+let f = [1, 2, 3, 4, 5];
+f instanceof Array; // true
+f instanceof Object; // true
