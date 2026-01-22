@@ -141,3 +141,9 @@ function getgrade(marks) {
     else if (marks >= 0 && marks < 50) return "Fail";
     else return "Invalid marks";
 }
+
+// ((player1 === "rock" && player2 === "scissors") ||
+// (player1 === "paper" && player2 === "rock") ||
+// (player1 === "scissors" && player2 === "paper")){
+// return "Player 1 wins!";
+//
