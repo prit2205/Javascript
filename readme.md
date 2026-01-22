@@ -545,3 +545,79 @@ console.log("Matched");
 <p>Matched</p>
 <p>Why:Comparison happens before decrement</p>
 </div>
+
+
+Javascript Controlflow
+<div>
+<h1>Example 1 :</h1>
+<p>let x = 2;</p>
+<p>switch(x){
+
+    case 2:
+
+    console.log("Two");
+
+    case 3:
+
+    console.log("Three");
+
+}</P>
+<p>Ans:Two and Three</p>
+<p>Why:Because variable valuse is two so the switch case select that varible and match with case and if that match that case will be the execute but this code there are not breck so this print all  </p>
+<div>
+ 
+<div>
+<h1>Example 2 :</h1>
+<p>Write a function getGrade(score) that:</p>
+<p> Takes A student's score as input (0 to 100)</P>
+<p>Returns the grade based on below logic:</P>
+<p>90-100 A+</P>
+<p>80-89 A</P>
+<p>70-79 B</P>
+<p>60-69 C</P>
+<p>33-59 D</P>
+<p>0-32 Fail</P>
+<p>Anything Else Invalid Marks</P>
+<p>Ans:
+function getGrade(score) {
+    if (score >= 90 && score <= 100) {
+        return 'A';
+    } else if (score >= 80 && score < 90) {
+        return 'B';
+    } else if (score >= 70 && score < 80) { 
+        return 'C';
+    } else if (score >= 60 && score < 70) {
+        return 'D';
+    } else if (score >= 0 && score < 60) {
+        return 'F';
+    } else {
+        return 'Invalid score';
+    }
+};
+getGrade(75);
+
+Ans is C
+</p>
+<div>
+ 
+<div>
+<h1>Example 3 :</h1>
+<p>Rock-Paper-Scissors:</p>
+<p>rock - scissors --> rock</P>
+<p>paper - rock --> paper</P>
+<p>scissors - paper --> scissors</P>
+<p>Ans:
+function rps(player1, player2){
+    if(player1 === player2){
+        return "It's a tie!";
+    }
+    if((player1 === "rock" && player2 === "scissors") ||
+       (player1 === "paper" && player2 === "rock") ||
+       (player1 === "scissors" && player2 === "paper")){
+        return "Player 1 wins!";
+    }
+    return "Player 2 wins!";
+}
+console.log(rps("rock", "scissors")); // Player 1 wins!</p>
+<div>
+ 
