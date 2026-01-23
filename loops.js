@@ -56,3 +56,77 @@ while (a >= 20){
     console.log(a)
     a--;
 }
+
+let c =30
+ while(c > 20) {
+     console.log(c)
+     c--;
+ }
+
+ let f = 50;
+ while (f <= 60 ){
+     console.log("Hello", f)
+     f++;
+ }
+
+ let q = 50;
+ while(q <= 60) {
+    console.log(q)
+     ++q;
+}
+
+// do while loop
+// do {} while (end);
+// start
+// do {
+// code
+// change
+// } while (end condition);
+let j = 12; // start
+do {
+    console.log("j with do while loop", j); // code
+    j++; // change
+} while (j < 20); // end condition
+
+let z = 16; // start
+do {
+    console.log("z with do while loop error", z); // code
+    z++; // change condition   
+} while (z < 10);
+
+// break 
+for (let k = 1; k <= 201; k++) {
+    console.log("loop with break", k);
+    if (k === 25) {
+        break;
+    }
+}
+
+for (let k = 12; k <= 201; k++) {
+    console.log("loop with break 2", k);
+    if (k < 24){
+        break
+    }
+}
+
+for (let m = 1; m <= 50; m++) {
+    console.log("loop with break 3", m);
+    if (m === 30) {
+        break;
+    }   
+}
+
+// continue
+for (let a = 1; a <= 10; a++) {
+    if (a === 5) {
+        continue;
+    }   
+    console.log(a);
+}
+
+for (let A = 1; A <= 15; A++) {
+    if (A >= 8) {
+        continue;
+    }
+    console.log("loop that skip numbers", A);
+}
