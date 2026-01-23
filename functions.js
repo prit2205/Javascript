@@ -36,3 +36,11 @@ function cartBtn_price(product, price) {
 cartBtn_price("Dell laptop", 45000);
 cartBtn_price("Apple 16", 250000);
 cartBtn_price("PS 5", 50000);
+
+function student_info(name, age, grade) {
+    console.log("Student Name:", name, "Age:", age, "Grade:", grade);
+}
+student_info("Prit", 24, "A+");
+student_info("Amit", 22, "B");
+student_info("Sonal", 23, "A");     
+student_info("Rina", 21, "C+");
