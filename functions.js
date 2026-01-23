@@ -25,14 +25,23 @@ temp_cart();
 
 function cartBtn_price(product) { // product --> parameter
     console.log("Adding", product, "to the cart");
-}
+};
 cartBtn_price("Dell laptop"); // "Dell laptop" --> argument
 cartBtn_price("Apple 16");
 cartBtn_price("PS 5");
 
 function cartBtn_price(product, price) {
     console.log("Adding", product, "to Cart with", price);
-}
+};
+cartBtn_price("Dell laptop", 45000);
+cartBtn_price("Apple 16", 250000);
+cartBtn_price("PS 5", 50000);
+
+// convert into arrow function
+// let fuc == () => {}
+let fnc_arrow = (product, price) => {
+    console.log("Adding", product, "to Cart with", price);
+};
 cartBtn_price("Dell laptop", 45000);
 cartBtn_price("Apple 16", 250000);
 cartBtn_price("PS 5", 50000);
