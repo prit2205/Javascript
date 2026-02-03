@@ -198,3 +198,106 @@ function outer2() {
 }
 outer2();
 
+// IIFE - Immediately Invoked function expression 
+(function () {})(); // function je declare karata j call thai jay
+(function temp_IIFE() {
+    console.log("IIFE Function")
+})();
+
+// Hoisting in function 
+temp_abc();
+function temp_abc(){
+    console.log("Hosited Function")
+} // -- function decleration
+
+let temp_abc1 = () => {
+    console.log("Arrow Function")
+}
+temp_abc1();
+
+// function expression
+// hoistedFunction1(); // error:
+// let hoistedFunction1 = function () {
+// console.log("Hoisted function called");
+// }
+
+
+// Example 1:
+// Function declaration is fully hoisted (can be called before definition)
+// Function expression is not hoisted with its value (only variable hoisted)
+
+// Example 2:
+// Answer: No Error
+// Why: Function declaration is hoisted
+// greet();
+// function greet(){
+//     console.log("Hello!");
+// }
+
+// // Example 3:
+// // Arrow Function version
+// const add = (a, b) => a + b;
+
+// // Example 4:
+// // Parameter: name
+// // Argument: "user"
+// function welcome(name){
+//     console.log("Welcome " + name);
+// }
+// welcome("user");
+
+// // Example 5:
+// // Parameters: 3 (a, b, c)
+// // Arguments: 2 (1, 2)
+// // No Error, c becomes undefined
+// function temp(a, b, c){
+//     console.log(a, b, c);
+// }
+// temp(1, 2);
+
+// // Example 6:
+// // Output: Hello Guest
+// // No Error because default parameter is used
+// function temp_user(name = "Guest"){
+//     console.log("Hello " + name);
+// }
+// temp_user();
+
+// // Example 7:
+// // ... is rest operator
+// // It collects multiple arguments into an array
+// function number(...numbers){
+//     console.log(numbers);
+// }
+// number(1, 2, 3, 4, 5);
+
+// // Example 8:
+// // First function has Error because loop condition is wrong (<=)
+// // Second function is correct
+// function calculateTotal(...scores){
+//     let total = 0;
+//     scores.forEach(function(val){
+//         total += val;
+//     });
+//     return total;
+// }
+// let sumtotal = calculateTotal(10, 20, 30, 40, 50);
+// console.log(sumtotal);
+
+// // Example 9:
+// // Fixed using early return
+// function checkAge(age){
+//     if(age < 18){
+//         return "Too Young";
+//     }
+//     return "Access Granted";
+// }
+
+// // Example 10:
+// // Return value is undefined
+// function f(){
+//     return;
+// }
+// [1, 2, 3].map(function (x){
+//     return x * 2; }
+// )
