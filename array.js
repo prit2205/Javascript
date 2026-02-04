@@ -286,3 +286,62 @@ let temp_data = data.map((val) => {
 // ex. product ma thi specific price na product nikalva
 // if you want to create a new array based on some condition from existing array
 
+// ex 1:
+const steps1 = [1000, 2000, 4000];
+steps1.map((e, i) => {
+    steps1[i] *= 2;
+})
+console.log(steps)
+
+//ex 2
+const minutes = [1, 5, 10];
+minutes.map((e, i) => {
+    minutes[i] *= 60;
+})
+console.log(minutes)
+
+//ex 3
+const pricest = [200, 350, 500];
+pricest.map((e, i) => {
+    pricest[i] += 50;
+})
+console.log(pricest)
+
+// ex 4
+const marks = [35, 72, 88, 40];
+marks.map((e, i) => {
+    marks[i] = e >= 40 ? `${e} : pass` : `${e} : fail`;
+})
+console.log(marks)
+
+// ex 5
+const name3 = ['rahul', 'neha', 'amit'];
+name3.map((e, i) => {
+    name3[i] = e.toUpperCase();
+})
+console.log(name3)
+
+// ex 6
+const prices1 = [500, 1000, 1500];
+prices1.map((e, i) => {
+    prices1[i] = e - (e * 0.10)
+})
+console.log(prices1)
+
+// ex 7
+const score = [45, 60, 85];
+score.map((e, i) => {
+    if (e >= 80) { score[i] += 20; }
+    else if (e >= 50) { score[i] += 10; }
+})
+console.log(score)
+
+// ex 8
+const celsius = [0, 20, 30];
+let fehrenheit = celsius.map(e => ((e * 9 / 5) + 32))
+console.log(fehrenheit)
+
+// ex 9
+const numbers = [1, 2, 3, 4];
+let table = numbers.map((e, i) => (`${e} * ${i} = ${e * i}`))
+console.log(table)
