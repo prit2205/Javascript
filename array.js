@@ -345,3 +345,131 @@ console.log(fehrenheit)
 const numbers = [1, 2, 3, 4];
 let table = numbers.map((e, i) => (`${e} * ${i} = ${e * i}`))
 console.log(table)
+
+// filter
+// filter tyre use karvu ke jayre ek new array create karvo chhe with condition
+// in return true/false
+// if true --> add into new array
+// if else(false) --> not add into new array
+let laptops_price = [15000, 20000, 30000, 65000, 99000, 45000];
+
+let expensive_laptops = laptops_price.filter((price) => {
+    if (price > 3000) return true;
+});
+
+// je value 30000 thi vadhare chhe te new array ma add thase and biji value ne array ma add nahi kare
+
+// use case -- data ma thi specific data new array store karvo hoy based on condition
+// ex. product ma thi specific price na product new array ma store karva hoy
+// if you want to show only expensive prdouct on your homepage 
+// if you want to filter product based on price
+let product_type = ["Mobile", "Tablet", "Laptop", "Mouse", "Keyborad"];
+let filter_product_type = product_type.filter((type) => {
+    if (type === "Tablet" || type === "Moblie") return true;
+});
+
+// reduce
+// reduce tyare j use karvu ke jare ek single value calculate karvi hoy from array
+let total_price = [15, 68, 45, 58, 52, 48];
+
+let final_price = total_price.reduce((accumulator, val) => {
+        return accumulator + val;
+}, 0); // intial value of accumulator
+// 0+ 10 => 10
+// 10 + 68 => 75
+// 20 + 10 => 30
+console.log("Final Price :", final_price)
+// accumulator --> je value function ma retun thase te accumulator ma store thase --> accumulator name change kari sako cho
+// val --> array ni darek value
+
+// use case -- data ma thi ek single value calulate karvi hoy
+// ex. product ma thi total price calcaulate karvi hoy
+
+
+// find
+// find tyare j use karvu ke jare array mathi ek value find karvi hoy based on condition
+// find() return kare chhe array no element --> callback no return value nahi
+// never returns what you return inside it
+// returns the array element itself -- not return array
+//.find() stops at the first match
+// It does not continue looping
+
+let product = ["Laptop", "Mobile", "Tablet", "Desktop", "Smart Watch"];
+let find_product = product.find( (e) => {
+    if (e === "Tablet") {
+        return true;
+    } else if (e === "Desktop") {
+        return true;
+    } else {
+        return false
+    }
+});
+
+// use case -- data ma thi ek value find karvi hoy based on condition
+// ex. product ma thi specifice product find karvo hoy based on name
+
+// find vs filter
+// Real-life Scenario: Shopping Mall Security
+// your are a security guard at a shopping mall
+// chack the list of visitors
+let people = ["John", "Sara", "Mike", "Anna", "David", "Sara"];
+// find --> you are looking for the first person named "Sara" in the list and stop 
+let person = people.find((name) => name === "Sara");
+console.log("filter", AllSara);
+
+// example 2: Book bus for travel 
+
+// some 
+// check kare chhe ke array ma koi pan ek item codition satisfy kare chhe ke nahi
+// condition true aave tyere stop kare
+// some() vs find() --> some() can't return you value item its return true or false, find() return value of array 
+// give ans in true and false
+let marks1 = [10, 20, 35, 90];
+let any = marks1.some( (val) => {
+    if (val > 85) return 12;
+    // if  (val < 85) return "need improvement";
+});
+console.log(any)
+// use cae -- check if some product are out of stock in your cart
+
+//every
+// check kare chhe ke array ma baddha j items condition satisfy kare chhe ke nahi
+// true -- baha items condition match kare
+// false -- ek pan fail thay to
+let def = [20, 30, 90, 45];
+let num = def.every(function (val) {
+    return val < 40;
+})
+
+// use case --> check all student is pass or not
+
+// some), find(), filter(), every()
+// let products = ["Tablet", "Mobile", "Laptop", "Mobile"]
+// method --> condition --> output
+// .some() -> item === "Mobile" --> true
+//.find() --> item === "Mobile" -> "Mobile"
+//.filter() --> item == "Mobile" --> ["Mobile", "Mobile"]
+// .every() --> item === "Mobile" --> false
+
+// Destructuring oprator -- give value to variable 
+let arr6 = [1, 2, 3, 4, 5]
+// let j = arr6[0]; --> 1
+// let k = arr6[2]; --> 3
+let [ j, ,k] = arr6; // --> destructuring
+// let [, , n] = arr;
+console.log(k);
+let user_data = ["test", "test@gmail.com", "Male", "Surat"]
+// name, email, gender, city
+// console.log("name", name)
+
+
+// spread oprator -- copy value from main array
+let arr8 = [1, 2, 3, 4, 5, 6, 7];
+// let arr4 = arr3; // just give reference not copy value (when you change into arr4 that will be change arr3 too)
+let arr9 = [...arr8];
+// ... --> rest --> into function
+// ... --> spred --> into Array and Object -- copy
+let temp_arr = [1, 2, 3];
+let temp_arr2 = [4, 5, 6];
+let mix_arr = [...temp_arr, ...temp_arr2];
+console.log(mix_arr)
