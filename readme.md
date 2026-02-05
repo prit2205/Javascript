@@ -1156,3 +1156,216 @@ numPure(5, 3);<p>
 // const messages = balances.map(balance =>
 //   Your balance is ₹${balance}
 // );
+
+### 1. Get even numbers
+**Real life:** Find even roll numbers
+```js
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+ans:const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+```
+---
+
+### 2. Filter adults
+**Real life:** Allow only 3+ users
+```js
+const ages = [2, 1, 10, 16, 5];
+function isAdult(age) {
+  return age >= 18;
+}
+const adults = ages.filter(isAdult);
+ans:const ages = [2, 1, 10, 16, 5];
+function isAdult(age) {
+  return age >= 18;
+}
+const adults = ages.filter(isAdult);
+```
+
+---
+
+### 3. Remove empty items
+**Real life:** Clean user input
+```js
+const inputs = ['Hello', '', 'World', '', 'JS'];
+const validInputs = inputs.filter(text => text !== '');
+ans:const inputs = ['Hello', '', 'World', '', 'JS'];
+const validInputs = inputs.filter(text => text !== '');
+```
+---
+
+### 4. Filter passing marks
+**Real life:** Exam result system
+```js
+const marks = [35, 72, 88, 40, 25];
+const passedStudents = marks.filter(mark => mark >= 40);
+ans:const marks = [35, 72, 88, 40, 25];
+const passedStudents = marks.filter(mark => mark >= 40);
+```
+---
+
+### 5. Get affordable prices
+**Real life:** Shopping app price filter
+```js
+const prices = [199, 499, 999, 1499, 299];
+const affordable = prices.filter(price => price <= 500);
+ans:const prices = [199, 499, 999, 1499, 299];
+const affordable = prices.filter(price => price <= 500);
+```
+---
+
+### 6. Filter long words
+**Real life:** Search keyword validation
+```js
+const words = ['hi', 'hello', 'javascript', 'ok'];
+function isLongWord(word) {
+  return word.length > 3;
+}
+const longWords = words.filter(isLongWord);
+ans:const words = ['hi', 'hello', 'javascript', 'ok'];
+function isLongWord(word) {
+  return word.length > 3;
+}
+const longWords = words.filter(isLongWord);
+```
+
+### 7. Filter positive numbers
+**Real life:** Bank transaction validation
+```js
+const transactions = [200, -100, 500, -50, 300];
+const credits = transactions.filter(amount => amount > 0);
+ans:const transactions = [200, -100, 500, -50, 300];
+const credits = transactions.filter(amount => amount > 0);
+```
+
+---
+
+### 8. Filter numbers within a range
+**Real life:** Score selection
+```js
+const scores = [45, 60, 85, 30, 90];
+const selectedScores = scores.filter(score => score >= 50 && score <= 90);
+ans:const scores = [45, 60, 85, 30, 90];
+const selectedScores = scores.filter(score => score >= 50 && score <= 90);
+```
+
+
+
+JavaScript .reduce() Method Example:
+
+### 1. Total money in wallet
+
+**Real life:** Add all cash amounts
+```js
+const money = [100, 200, 50];
+
+const totalMoney = money.reduce((sum, amount) => sum + amount, 0);
+ans:const money = [100, 200, 50];
+const totalMoney = money.reduce((sum, amount) => sum + amount, 0);
+// Output: 350
+```
+ 
+---
+ 
+### 2. Total steps walked in a week
+**Real life:** Fitness tracker
+```js
+const steps = [3000, 5000, 4000, 6000];
+function addSteps(total, step) {
+  return total + step;
+}
+const weeklySteps = steps.reduce(addSteps, 0);
+ans:const steps = [3000, 5000, 4000, 6000];
+const weeklySteps = steps.reduce((total, step) => total + step, 0);
+// Output: 18000
+```
+ 
+---
+ 
+### 3. Find total cart price
+**Real life:** Shopping bill
+```js
+const prices = [499, 299, 199];
+const totalPrice = prices.reduce((total, price) => total + price, 0);
+ans:const prices = [499, 299, 199];
+const totalPrice = prices.reduce((total, price) => total + price, 0);
+// Output: 997
+```
+ 
+---
+ 
+### 4. Find maximum score
+**Real life:** Highest exam mark
+```js
+const marks = [45, 88, 67, 92];
+const highest = marks.reduce((max, mark) => {
+  return mark > max ? mark : max;
+}, marks[0]);
+ans:const marks = [45, 88, 67, 92];
+const highest = marks.reduce((max, mark) => mark > max ? mark : max, marks[0]);
+// Output: 92
+```
+
+---
+ 
+### 5. Count total characters
+**Real life:** Text length calculation
+```js
+const words = ['Hi', 'Hello', 'JS'];
+const totalChars = words.reduce((count, word) => count + word.length, 0);
+ans:const words = ['Hi', 'Hello', 'JS'];
+const totalChars = words.reduce((count, word) => count + word.length, 0);
+// Output: 9
+```
+ 
+---
+ 
+### 6. Combine words into a sentence
+**Real life:** Message builder
+```js
+const words = ['Learning', 'JavaScript', 'is', 'fun'];
+const sentence = words.reduce((text, word) => text + ' ' + word);
+ans:const words = ['Learning', 'JavaScript', 'is', 'fun'];
+const sentence = words.reduce((text, word) => text + ' ' + word);
+// Output: "Learning JavaScript is fun"
+```
+
+---
+ 
+### 7. Count passed students
+**Real life:** Result summary
+```js
+const marks = [35, 72, 88, 40, 25];
+const passCount = marks.reduce((count, mark) => {
+  return mark >= 40 ? count + 1 : count;
+}, 0);
+ans:const marks = [35, 72, 88, 40, 25];
+const passCount = marks.reduce((count, mark) => mark >= 40 ? count + 1 : count, 0);
+// Output: 3
+```
+ 
+---
+ 
+### 8. Calculate final balance
+**Real life:** Bank account calculation
+```js
+const transactions = [1000, -200, -300, 500];
+const finalBalance = transactions.reduce((balance, amount) => balance + amount, 0);
+ans:const transactions = [1000, -200, -300, 500];
+const finalBalance = transactions.reduce((balance, amount) => balance + amount, 0);
+// Output: 1000
+```
+---
+ 
+---
+ 
+### 10. Build comma-separated string
+**Real life:** Display values in UI
+```js
+const items = ['Pen', 'Book', 'Pencil'];
+const result = items.reduce((text, item) => text + ', ' + item);
+ans:const items = ['Pen', 'Book', 'Pencil'];
+const result = items.reduce((text, item) => text + ', ' + item);
+// Output: "Pen, Book, Pencil"
+```
+---
