@@ -414,7 +414,7 @@ let find_product = product.find( (e) => {
 // chack the list of visitors
 let people = ["John", "Sara", "Mike", "Anna", "David", "Sara"];
 // find --> you are looking for the first person named "Sara" in the list and stop 
-let person = people.find((name) => name === "Sara");
+let AllSara = people.find((name) => name === "Sara");
 console.log("filter", AllSara);
 
 // example 2: Book bus for travel 
