@@ -474,3 +474,305 @@ let temp_arr2 = [4, 5, 6];
 let mix_arr = [...temp_arr, ...temp_arr2];
 console.log(mix_arr)
 
+
+/************************************************
+MAP + FILTER + REDUCE PRACTICE (Q1–Q20)
+************************************************/
+
+/* =========================
+Q1. Grocery Store – Total Cost
+========================= */
+const prices10 = [50, 120, 300, 80, 200];
+
+const totalCost = prices1
+  .filter(price => price > 100)
+  .map(price => price * 1.05)
+  .reduce((sum, price) => sum + price, 0);
+
+console.log(totalCost);
+// Answer: 651
+// Why: Items >100 taxed 5% then summed
+
+
+/* =========================
+Q2. Fitness App – Weekly Calories
+========================= */
+const minutes1 = [10, 25, 40, 15, 60];
+
+const totalCalories11 = minutes1
+  .filter(min => min >= 20)
+  .map(min => min * 4)
+  .reduce((sum, cal) => sum + cal, 0);
+
+console.log(totalCalories);
+// Answer: 500
+// Why: Valid workout days converted to calories
+
+
+/* =========================
+Q3. Exam Results – Total Passed Marks
+========================= */
+const marks10 = [35, 55, 80, 20, 45];
+
+const totalPassedMarks = marks1
+  .filter(mark => mark >= 40)
+  .reduce((sum, mark) => sum + mark, 0);
+
+console.log(totalPassedMarks);
+// Answer: 180
+// Why: Only passing marks added
+
+
+/* =========================
+Q4. Bank App – Total Credits
+========================= */
+const transactions10 = [500, -200, 1000, -300, 700];
+
+const totalCredits = transactions1
+  .filter(amount => amount > 0)
+  .reduce((sum, amount) => sum + amount, 0);
+
+console.log(totalCredits);
+// Answer: 2200
+// Why: Only positive transactions counted
+
+
+/* =========================
+Q5. Online Sale – Discounted Bill
+========================= */
+const prices20 = [800, 1500, 3000, 600, 1200];
+
+const discountedBill = prices2
+  .filter(price => price > 1000)
+  .map(price => price * 0.85)
+  .reduce((sum, price) => sum + price, 0);
+
+console.log(discountedBill);
+// Answer: 4845
+// Why: Items above 1000 discounted 15%
+
+
+/* =========================
+Q6. Attendance – Reward Points
+========================= */
+const hours1 = [5, 7, 8, 6, 9];
+
+const rewardPoints = hours1
+  .filter(hour => hour >= 7)
+  .map(hour => hour * 10)
+  .reduce((sum, point) => sum + point, 0);
+
+console.log(rewardPoints);
+// Answer: 240
+// Why: Only valid hours earn points
+
+
+/* =========================
+Q7. Delivery App – Total Distance
+========================= */
+const distances = [3, 6, 10, 4, 8];
+
+const totalDistance = distances
+  .filter(d => d > 5)
+  .map(d => d + 1)
+  .reduce((sum, d) => sum + d, 0);
+
+console.log(totalDistance);
+// Answer: 27
+// Why: Long trips get 1km bonus
+
+
+/* =========================
+Q8. Salary System – Final Salary
+========================= */
+const salaries = [18000, 25000, 30000, 15000];
+
+const totalSalary = salaries
+  .filter(sal => sal > 20000)
+  .map(sal => sal + 2000)
+  .reduce((sum, sal) => sum + sal, 0);
+
+console.log(totalSalary);
+// Answer: 59000
+// Why: Eligible salaries get bonus
+
+
+/* =========================
+Q9. Study App – Total Study Time
+========================= */
+const hours2 = [0.5, 1.5, 2, 0.75, 3];
+
+const totalStudyMinutes = hours2
+  .filter(hour => hour > 1)
+  .map(hour => hour * 60)
+  .reduce((sum, min) => sum + min, 0);
+
+console.log(totalStudyMinutes);
+// Answer: 390
+// Why: Sessions >1hr converted to minutes
+
+
+/* =========================
+Q10. Electricity Usage – Monthly Bill
+========================= */
+const units = [80, 120, 200, 90, 150];
+
+const electricityBill = units
+  .filter(unit => unit > 100)
+  .map(unit => unit * 6)
+  .reduce((sum, cost) => sum + cost, 0);
+
+console.log(electricityBill);
+// Answer: 2820
+// Why: Usage >100 charged per unit
+
+
+/* =========================
+Q11. Game Scores – Final Power Score
+========================= */
+const scores11 = [30, 50, 90, 20, 70];
+
+const powerScore = scores1
+  .filter(score => score > 40)
+  .map(score => score * 2)
+  .reduce((sum, score) => sum + score, 0);
+
+console.log(powerScore);
+// Answer: 420
+// Why: Qualified scores doubled
+
+
+/* =========================
+Q12. Travel App – Total Fare
+========================= */
+const rides = [5, 12, 20, 8, 15];
+
+const totalFare = rides
+  .filter(km => km > 10)
+  .map(km => km + 50)
+  .reduce((sum, fare) => sum + fare, 0);
+
+console.log(totalFare);
+// Answer: 147
+// Why: Long rides get service fee
+
+
+/* =========================
+Q13. Office Work – Productive Hours
+========================= */
+const hours3 = [4, 6, 8, 5, 9];
+
+const productiveMinutes = hours3
+  .filter(hour => hour >= 6)
+  .map(hour => hour * 60)
+  .reduce((sum, min) => sum + min, 0);
+
+console.log(productiveMinutes);
+// Answer: 1380
+// Why: Productive hours converted to minutes
+
+
+/* =========================
+Q14. Shopping Cart – Reward Coins
+========================= */
+const purchases = [300, 800, 1200, 400];
+
+const rewardCoins = purchases
+  .filter(amount => amount > 500)
+  .map(() => 10)
+  .reduce((sum, coin) => sum + coin, 0);
+
+console.log(rewardCoins);
+// Answer: 20
+// Why: Each qualifying purchase gives 10 coins
+
+
+/* =========================
+Q15. Fuel App – Total Fuel Cost
+========================= */
+const liters = [3, 6, 10, 4, 8];
+
+const fuelCost = liters
+  .filter(l => l > 5)
+  .map(l => l * 105)
+  .reduce((sum, cost) => sum + cost, 0);
+
+console.log(fuelCost);
+// Answer: 2520
+// Why: Fuel above 5L charged per liter
+
+
+/* =========================
+Q16. Interview Classic – Sum of Cubes
+========================= */
+const numbers10 = [1, 2, 3, 4, 5];
+
+const sumOfCubes = numbers1
+  .filter(num => num % 2 !== 0)
+  .map(num => num ** 3)
+  .reduce((sum, num) => sum + num, 0);
+
+console.log(sumOfCubes);
+// Answer: 153
+// Why: Odd numbers cubed and added
+
+
+/* =========================
+Q17. Performance Tracking – Bonus Points
+========================= */
+const scores20 = [10, 20, 30, 40, 50];
+const avg = scores2.reduce((a, b) => a + b, 0) / scores2.length;
+
+const bonusScore = scores2
+  .filter(score => score > avg)
+  .map(score => score + 5)
+  .reduce((sum, score) => sum + score, 0);
+
+console.log(bonusScore);
+// Answer: 100
+// Why: Above-average scores get bonus
+
+
+/* =========================
+Q18. Subscription App – Final Bill
+========================= */
+const plans = [199, 399, 599, 299];
+
+const finalBill = plans
+  .filter(plan => plan > 300)
+  .map(plan => plan * 1.18)
+  .reduce((sum, plan) => sum + plan, 0);
+
+console.log(finalBill);
+// Answer: 1177.82
+// Why: Premium plans taxed 18%
+
+
+/* =========================
+Q19. Learning App – Achievement Score
+========================= */
+const scores3 = [45, 60, 70, 30, 80];
+
+const achievementScore = scores3
+  .filter(score => score >= 60)
+  .map(score => score * score)
+  .reduce((sum, score) => sum + score, 0);
+
+console.log(achievementScore);
+// Answer: 14900
+// Why: Qualified scores squared and summed
+
+
+/* =========================
+Q20. Interview Finisher – Final Sum
+========================= */
+const numbers2 = [3, 6, 9, 10, 12];
+
+const finalSum = numbers2
+  .filter(num => num % 3 === 0)
+  .map(num => num * 10)
+  .reduce((sum, num) => sum + num, 0);
+
+console.log(finalSum);
+// Answer: 300
+// Why: Numbers divisible by 3 multiplied and added
