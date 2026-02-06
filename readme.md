@@ -1369,3 +1369,100 @@ const result = items.reduce((text, item) => text + ', ' + item);
 // Output: "Pen, Book, Pencil"
 ```
 ---
+
+
+
+## 1. `.find()` – First even number
+
+**Real life:** Find first available even seat number
+```js
+const seats = [3, 5, 8, 10, 7];
+const firstEvenSeat = seats.find(seat => seat % 2 === 0);
+console.log(firstEvenSeat); // 8
+```
+
+---
+## 2. `.some()` – Any even number?
+**Real life:** Check if any VIP seat exists
+```js
+const seats = [3, 5, 7, 9];
+const hasEvenSeat = seats.some(seat => seat % 2 === 0);
+console.log(hasEvenSeat); // false
+```
+
+---
+## 3. `.find()` – First passing mark
+**Real life:** Find first student who passed
+```js
+const marks = [25, 35, 40, 60];
+const firstPass = marks.find(mark => mark >= 40);
+console.log(firstPass); // 40
+```
+
+---
+## 4. `.some()` – Any failed student?
+**Real life:** Check if re-test is needed
+```js
+const marks = [60, 70, 55, 30];
+const hasFail = marks.some(mark => mark < 40);
+console.log(hasFail); // true
+```
+
+---
+
+## 5. `.find()` – First affordable product
+**Real life:** Shopping app price filter
+```js
+const prices = [1500, 1200, 800, 2000];
+const affordable = prices.find(price => price <= 1000);
+console.log(affordable); // 800
+```
+
+---
+
+## 6. `.some()` – Any discount item?
+**Real life:** Show discount banner
+```js
+const prices = [500, 800, 1200, 300];
+const hasDiscountItem = prices.some(price => price < 500);
+console.log(hasDiscountItem); // true
+```
+
+---
+## 7. `.find()` – First long word
+**Real life:** Auto-suggestion keyword
+```js
+const words = ['hi', 'hello', 'javascript', 'ok'];
+const longWord = words.find(word => word.length > 5);
+console.log(longWord); // "javascript"
+```
+
+---
+## 8. `.some()` – Any empty input?
+**Real life:** Form validation
+```js
+const inputs = ['name', 'email', '', 'password'];
+const hasEmpty = inputs.some(input => input === '');
+console.log(hasEmpty); // true
+```
+
+---
+
+## 9. `.find()` – First high transaction
+**Real life:** Fraud detection
+```js
+const transactions = [200, 500, 1200, 3000, 400];
+const highTransaction = transactions.find(amount => amount > 1000);
+console.log(highTransaction); // 1200
+```
+
+---
+
+## 10. `.some()` – System alert check ⭐
+**Real life:** Check if any value exceeds limit
+```js
+const temperatures = [30, 32, 35, 42, 36];
+const isOverheated = temperatures.some(temp => temp > 40);
+console.log(isOverheated); // true
+```
+---

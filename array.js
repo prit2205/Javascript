@@ -504,7 +504,7 @@ const totalCalories11 = minutes1
   .map(min => min * 4)
   .reduce((sum, cal) => sum + cal, 0);
 
-console.log(totalCalories);
+console.log(totalCalories11);
 // Answer: 500
 // Why: Valid workout days converted to calories
 
@@ -528,7 +528,7 @@ Q4. Bank App – Total Credits
 ========================= */
 const transactions10 = [500, -200, 1000, -300, 700];
 
-const totalCredits = transactions1
+const totalCredits = transactions10
   .filter(amount => amount > 0)
   .reduce((sum, amount) => sum + amount, 0);
 
@@ -542,7 +542,7 @@ Q5. Online Sale – Discounted Bill
 ========================= */
 const prices20 = [800, 1500, 3000, 600, 1200];
 
-const discountedBill = prices2
+const discountedBill = prices20
   .filter(price => price > 1000)
   .map(price => price * 0.85)
   .reduce((sum, price) => sum + price, 0);
@@ -632,7 +632,7 @@ Q11. Game Scores – Final Power Score
 ========================= */
 const scores11 = [30, 50, 90, 20, 70];
 
-const powerScore = scores1
+const powerScore = scores11
   .filter(score => score > 40)
   .map(score => score * 2)
   .reduce((sum, score) => sum + score, 0);
@@ -707,7 +707,7 @@ Q16. Interview Classic – Sum of Cubes
 ========================= */
 const numbers10 = [1, 2, 3, 4, 5];
 
-const sumOfCubes = numbers1
+const sumOfCubes = numbers10
   .filter(num => num % 2 !== 0)
   .map(num => num ** 3)
   .reduce((sum, num) => sum + num, 0);
@@ -721,9 +721,9 @@ console.log(sumOfCubes);
 Q17. Performance Tracking – Bonus Points
 ========================= */
 const scores20 = [10, 20, 30, 40, 50];
-const avg = scores2.reduce((a, b) => a + b, 0) / scores2.length;
+const avg = scores20.reduce((a, b) => a + b, 0) / scores20.length;
 
-const bonusScore = scores2
+const bonusScore = scores20
   .filter(score => score > avg)
   .map(score => score + 5)
   .reduce((sum, score) => sum + score, 0);
@@ -776,3 +776,4 @@ const finalSum = numbers2
 console.log(finalSum);
 // Answer: 300
 // Why: Numbers divisible by 3 multiplied and added
+
