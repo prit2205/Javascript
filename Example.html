@@ -1,0 +1,593 @@
+ <section id="datatypes">
+            <h2>Data Types Examples</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <tbody>
+                    <th>examples day 15-02-2026</th>
+                    <th>
+                        <pre>
+all examples
+ ## create Readmd.md file and write the answers of all questions</pre>
+                    </th>
+                    <th>Answer</th>
+<h1>## 🟢 BEGINNER LEVEL (1–20)</h1>
+                    <tr>
+                        <td>Example 1</td>
+                        <td>
+
+                            ### Q1. Variables
+
+                            What is the difference between `var`, `let`, and `const`?
+
+                            ---
+                        </td>
+                        <td>
+                            answer : q1 : var, let, const difference
+                            var: Function-scoped, can be redeclared and updated, hoisted with undefined.
+
+                            let: Block-scoped, can be updated but not redeclared in the same scope.
+
+                            const: Block-scoped, can be updated but not redeclared in the same scope.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 2</td>
+                        <td>
+                            Name all primitive data types in JavaScript.
+                        </td>
+                        <td>
+                            answer : q2 : primitive data types
+                            string, number, boolean, null, undefined, symbol, bigint
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 3</td>
+                        <td>
+                            How do you check the type of a variable?
+                        </td>
+                        <td>
+                            answer : q3 : typeof
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 4</td>
+                        <td>
+                            What is the difference between `==` and `===`?
+                        </td>
+                        <td>
+                            answer : q4 : ==, ===
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 5</td>
+                        <td>
+                            What will be the output?
+                            ```js
+                            let x = 10;
+                            console.log(x + 5 * 2);
+                            ```
+                        </td>
+                        <td>
+                            answer : q5 : 30
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 6</td>
+                        <td>
+                            What is the output?
+                            ```js
+                            console.log('5' + 2);
+                            ```
+                        </td>
+                        <td>
+                            answer : q6 : 52
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 7</td>
+                        <td>
+                            What is the output?
+                            ```js
+                            console.log(true && false);
+                            ```
+                        </td>
+                        <td>
+                            answer : q7 : false
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 8</td>
+                        <td>
+                            What is a function and why is it used?
+                        </td>
+                        <td>
+                            answer : q8 : function is a block of code that performs a task or calculates a value.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 9</td>
+                        <td>
+                            What will this return?
+                            ```js
+                            function add(a, b) {
+                            return a + b;
+                            }
+                            add(2, 3);
+                            ```
+                        </td>
+                        <td>
+                            answer : q9 : 5
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 10</td>
+                        <td>
+                            How do you create an array in JavaScript?
+                        </td>
+                        <td>
+                            answer : q10 : const arr = [1, 2, 3];
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 11</td>
+                        <td>
+                            What is the output?
+                            ```js
+                            const arr = [10, 20, 30];
+                            console.log(arr[1]);
+                            ```
+                        </td>
+                        <td>
+                            answer : q11 : 20
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 12</td>
+                        <td>
+                            What is an object in JavaScript?
+                        </td>
+                        <td>
+                            answer : q12 : object is a collection of key-value pairs.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 13</td>
+                        <td>
+                            What is the output?
+                            ```js
+                            const user = { name: 'A', age: 20 };
+                            console.log(user.age);
+                            ```
+                        </td>
+                        <td>
+                            answer : q13 : 20
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 14</td>
+                        <td>
+                            What does an `if` statement do?
+                        </td>
+                        <td>
+                            answer : q14 : condition check
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 15</td>
+                        <td>
+                            What is the output?
+                            ```js
+                            let x = 5;
+                            if (x > 3) console.log('Yes');
+                            ```
+                        </td>
+                        <td>
+                            answer : q15 : Yes
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 16</td>
+                        <td>
+                            What is a loop and why is it used?
+                        </td>
+                        <td>
+                            answer : q16 : loop
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 17</td>
+                        <td>
+                            What is the output?
+                            ```js
+                            for (let i = 0; i < 3; i++) { console.log(i); } ``` </td>
+                        <td>
+                            answer : q17 : 0, 1, 2
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 18</td>
+                        <td>
+                            When should you use a `while` loop?
+                        </td>
+                        <td>
+                            answer : q18 : when you want to repeat a block of code until a certain condition is met.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 19</td>
+                        <td>
+                            What is the result?
+                            ```js
+                            let a = 5;
+                            a++;
+                            console.log(a);
+                            ```
+                        </td>
+                        <td>
+                            answer : q19 : 6
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 20</td>
+                        <td>
+                            How do you write single-line and multi-line comments?
+                        </td>
+                        <td>
+                            answer : q20 : single line comment : //, multi line comment : /*
+                        </td>
+                    </tr>
+                    <h1>## 🟡 INTERMEDIATE LEVEL (21–35)</h1>
+                    <tr>
+                        <td>Example 21</td>
+                        <td>
+                            What is block scope?
+                        </td>
+                        <td>
+                            answer : q21 : Block scope means variables declared inside a { } (like an if or for loop)
+                            using let or const cannot be accessed from outside that block.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 22</td>
+                        <td>
+                            What is hoisting in JavaScript?
+                        </td>
+                        <td>
+                            answer : q22 : Hoisting is a JavaScript mechanism where variables and functions are moved to
+                            the top of their scope before code execution.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 23</td>
+                        <td>
+                            What is the difference between `undefined` and `null`?
+                        </td>
+                        <td>
+                            answer : q23 : Undefined means a variable has been declared but has not been assigned a
+                            value. Null means a variable has been declared and has been assigned a value of null.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 24</td>
+                        <td>
+                            List all falsy values in JavaScript.
+                        </td>
+                        <td>
+                            answer : q24 : false, 0, "", null, undefined
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 25</td>
+                        <td>
+                            What is the difference between normal functions and arrow functions?
+                        </td>
+                        <td>
+                            answer : q25 : Normal functions are defined using the function keyword, while arrow
+                            functions are defined using the => operator.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 26</td>
+                        <td>
+                            Explain with an example.
+                        </td>
+                        <td>
+                            answer : q26 : Parameters are the names listed in the function definition, while arguments
+                            are the real values passed to the function.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 27</td>
+                        <td>
+                            What happens if a function does not return anything?
+                        </td>
+                        <td>
+                            answer : q27 : The function will return undefined.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 28</td>
+                        <td>
+                            What is the difference between `push()` and `pop()`?
+                        </td>
+                        <td>
+                            answer : q28 : Push adds elements to the end of an array, while pop removes elements from
+                            the end of an array.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 29</td>
+                        <td>
+                            When should you use loops instead of array methods?
+                        </td>
+                        <td>
+                            answer : q29 : When you need to perform a task on each element of an array.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 30</td>
+                        <td>
+                            How do you loop through object properties?
+                        </td>
+                        <td>
+                            answer : q30 : Using a for...in loop.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 31</td>
+                        <td>
+                            Explain `break` and `continue` with loops.
+                        </td>
+                        <td>
+                            answer : q31 : Break exits the loop, while continue skips to the next iteration.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 32</td>
+                        <td>
+                            What is the result?
+                            ```js
+                            console.log(0 == false);
+                            console.log(0 === false);
+                            ```
+                        </td>
+                        <td>
+                            answer : q32 : false, false
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 33</td>
+                        <td>
+                            Rewrite using ternary:
+                            ```js
+                            if (age >= 18) {
+                            status = 'adult';
+                            }
+                            ```
+                        </td>
+                        <td>
+                            answer : q33 : age >= 18 ? status = 'adult' : null;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 34</td>
+                        <td>
+                            What is array destructuring?
+                        </td>
+                        <td>
+                            answer : q34 : Array destructuring allows you to assign values from an array to variables.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 35</td>
+                        <td>
+                            What does the spread operator do with arrays?
+                        </td>
+                        <td>
+                            answer : q35 : The spread operator (...) expands an array into its individual elements.
+                        </td>
+                    </tr>
+                    <h1>## 🔵 ADVANCED LEVEL (36–50)</h1>
+                    <tr>
+                        <td>Example 36</td>
+                        <td>
+                            What is a closure? Give a simple example.
+                        </td>
+                        <td>
+                            answer : q36 : A closure is a feature in JavaScript where an inner function has access to
+                            the outer
+                            (enclosing) function's variables and parameters, even after the outer function has returned.
+                            Closures are created when a function is defined inside another function, allowing the inner
+                            function to "close over" the variables of the outer function.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 37</td>
+                        <td>
+                            What is the JavaScript execution context?
+                        </td>
+                        <td>
+                            answer : q37 : The JavaScript execution context is the environment in which JavaScript code
+                            is executed. It includes the global scope, function scopes, and variable scopes.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 38</td>
+                        <td>
+                            What is the call stack?
+                        </td>
+                        <td>
+                            answer : q38 : The call stack is a stack of functions that are currently being executed. It
+                            is used to manage the execution of functions in JavaScript.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 39</td>
+                        <td>
+                            Explain with arrays or objects.
+                        </td>
+                        <td>
+                            answer : q39 : Pass by value and pass by reference.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 40</td>
+                        <td>
+                            What is the difference?
+                        </td>
+                        <td>
+                            answer : q40 : Shallow copy creates a new object, but it only copies the first level of the
+                            object. Deep copy creates a new object and recursively copies all levels of the object.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 41</td>
+                        <td>
+                            What is a higher-order function?
+                        </td>
+                        <td>
+                            answer : q41 : A higher-order function is a function that takes a function as an argument or
+                            returns a function as a result.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 42</td>
+                        <td>
+                            What is a callback function?
+                        </td>
+                        <td>
+                            answer : q42 : A callback function is a function that is passed as an argument to another
+                            function and is executed inside that function.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 43</td>
+                        <td>
+                            Why is immutability important in JavaScript?
+                        </td>
+                        <td>
+                            answer : q43 : Immutability ensures that once a value is assigned, it cannot be changed.
+                            This helps prevent unexpected behavior and makes the code easier to reason about.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 44</td>
+                        <td>
+                            What is the event loop?
+                        </td>
+                        <td>
+                            answer : q44 : The event loop is a JavaScript engine's internal mechanism that handles
+                            asynchronous operations and ensures that code execution is non-blocking.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Example 45</td>
+                        <td>
+                            Synchronous vs Asynchronous
+                            Explain the difference.
+
+                        </td>
+                        <td>
+                            Synchronous: Code runs line-by-line; each line must finish before the next starts
+                            (blocking).
+
+                            Asynchronous: Tasks (like API calls) run in the background, allowing the rest of the code to
+                            keep running (non-blocking).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 46</td>
+                        <td>
+                            forEach vs map
+                            What is the difference?
+                        </td>
+                        <td>
+                            forEach: Executes a function for each element but returns undefined. Used for side effects.
+
+                            map: Executes a function for each element and returns a new array with the results.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 47</td>
+                        <td>
+                            == Interview Trap ⭐
+                            What is the output?
+                            console.log([] == []);
+                        </td>
+                        <td>
+                            answer : q47 : true
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 48</td>
+                        <td>
+                            typeof Interview Trap ⭐
+                            What is the output?
+                            console.log(typeof null);
+                        </td>
+                        <td>
+                            answer : q48 : object
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 49</td>
+                        <td>
+                            NaN Check
+                            How do you check if a value is NaN?
+                        </td>
+                        <td>
+                            answer : q49 : isNaN(value)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Example 50</td>
+                        <td>
+                            FINAL INTERVIEW QUESTION ⭐⭐⭐
+                            Explain how JavaScript code runs from start to finish (high-level).
+                        </td>
+                        <td>
+                            answer : q50 :
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </section>
