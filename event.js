@@ -70,3 +70,18 @@ let form = document.querySelector("form");
 form.addEventListener("submit", () => {
     document.body.style.backgroundColor = "red";
 });
+
+// keyDown --> Keyborad Checker
+
+// mousemove and mouseout
+
+let box3 = document.querySelector(".box3");
+box3.addEventListener("mousemove", ()=>{
+    box3.style.width = "500px";
+})
+
+box3.addEventListener("mouseout", ()=>{
+    box3.style.width = "100px";
+})
+
+// keyup - self
