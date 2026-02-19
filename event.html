@@ -37,6 +37,30 @@
         height: 300px;
         background-color: darkcyan;
        }
+       .outer{
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .inner{
+        width: 200px;
+        height: 200px;
+        background-color: lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .most_inner{
+        width: 100px;
+        height: 100px;
+        background-color: lightcyan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
     </style>
 </head>
 
@@ -71,6 +95,30 @@ Border Color<input type="color" class="backc-inp">
 </form>
 
     <div class="box3"></div>
+
+    <div class="outer">
+        <div class="inner">
+            <div class="most_inner">
+                <button>Cilck</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- To Do -->
+     <h1>Shopping List</h1>
+     <ul>
+        <li>Laptop i7 13th gen</li>
+        <li>HradDisk 1TB SSD</li>
+        <li>Power Cable</li>
+        <li>RGB Keyborad</li>
+        <li>Track Pad</li>
+     </ul>
+
+     <!-- Text Counter -->
+
+      <input type="text" id="counter">
+    <h1>Limited Count : <b class="count">10</b></h1>
+
 
 </body>
 <script src="event.js"></script>

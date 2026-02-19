@@ -85,3 +85,91 @@ box3.addEventListener("mouseout", ()=>{
 })
 
 // keyup - self
+
+// =============================================
+// Event Object
+// sel.addEventListener("change", (dets) => {
+//   console.log(dets); ===> dets -- that called event object
+// });
+
+// targrt, type, preventDefault
+// target --> that show element
+// type --> show event Type
+// preventDefault --> use for html-form --> prevent from to refresh and clean details
+
+// =============================================
+// event  bubbling and capturing
+// Event Bubbling -- when you click on most inner div, event will rise from inner to outer div par click thase, event will rise from inner to outer div par click thase, event will rise from inner to outer div par click thase
+
+// AND
+
+// first phase ==> event can run to top level element to bottom level element (parent to child)
+// second phase ==> event can run to bottom level element to top level element (child to parent)
+
+// first --> first phase then second phase ==> but phase 1 id default off, you have to on that setting
+// first phase --> capture phase
+// second phase --> event bubbling phase
+
+
+let outer = document.querySelector(".outer");
+let inner = document.querySelector(".inner");
+let most_inner = document.querySelector(".most_inner");
+
+outer.addEventListener("click", () => {
+    console.log("Outer Div Clicked");
+    document.body.style.backgroundColor = "skyblue";
+}, true); // true --> first phase on
+
+inner.addEventListener("click", () => {
+    console.log("Inner Div Clicked");
+
+});  
+most_inner.addEventListener("click", () => {
+    console.log("Most Inner Div Clicked");
+    document.body.style.backgroundColor = "red";
+});
+// phase 2: child --> parent (most inner --> inner --> outer)
+// true -- outer : phase 1 (true vali event run) : Parent --> child (ourter --> inner --> most inner)
+// true -- outer, inner : phase 1 (true vali event run) : Parent --> child (ourter --> inner --> most inner) phse 2 (default) : child --> parent (most inner --> inner --> outer)
+
+// =============================================
+
+// use case: make it to do listr thing
+// when you click on text that was show strike using bubbing 
+// create list and when you click on list item, show strike using bubbling
+let ul = document.querySelector("ul");
+
+ul.addEventListener("click", (dets) => {
+    if (dets.target.tagName === "LI") {   // Only apply to LI elements
+        if (dets.target.style.textDecoration === "line-through") {
+            dets.target.style.textDecoration = "none";
+        } else {
+            dets.target.style.textDecoration = "line-through";
+        }
+    }
+});
+
+// use case:
+// 1. secuity layer
+// 2. chaeck when event bubbling is fail
+
+// event and event listner and listner
+// capture and bubbling
+
+// live character count
+let counter = document.querySelector("#counter");
+let count = document.querySelector(".count");
+
+counter.addEventListener("input", (dets) => {
+    console.log(dets.target.value.length);
+    console.log(counter.value.length);
+
+    let limit = 10 - counter.value.length;
+
+    if (limit < 0) {
+        alert("Limited Reached");
+        counter.disabled = true;
+    } else {
+        count.textContent = limit;
+    }
+});
