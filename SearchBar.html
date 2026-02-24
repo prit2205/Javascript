@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar</title>
+    <style>
+        .searchBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5rem 0;
+        }
+        .bar{
+            outline: none;
+            width: 250px;
+            padding: 14px 16px;
+            border-radius: 24px;
+            border: 1px solid #222;
+        }
+        .card-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .wapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .blur{
+        position: absolute;
+        bottom: 0;
+        height: 40%;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        background-color: linear-gradient(to top,rgba(0,0,0,0.4), rgba(0,0,0,0));
+      }
+      .content {
+        position: absolute;
+        bottom: 10px;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        padding: 5px 10px 0px 10px;
+      }
+      .content h2{
+        font-size: 1.5rem;
+        color: white;
+      }
+      .card-text{
+        font-size: 14px;
+        line-height: 1.4;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="searchBox">
+      <input type="text" placeholder="Search ..." class="bar" />
+    </div>
+
+
+    <div class="wrapper">
+        <br>
+      <div class="card-container">
+        <!-- <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1771326083410-eb9042091e43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
+            class="img"
+          />
+          <div class="blur"></div>	
+          <div class="content">
+            <h2>Username</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem officiis pariatur modi neque animi, voluptate expedita
+              aliquid illum recusandae labore, provident sed voluptatum. Nisi
+              quae architecto perspiciatis quibusdam recusandae minus!
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="SearchBar.js"></script>
+  </body>
+</html>

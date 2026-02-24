@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Manager</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+        #main{
+        text-align: center;
+        margin-top: 5rem;
+
+        }
+        .waraper{
+                background: brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inp_div input{
+            outline: nobe;
+            border: none;
+            padding: 5px 10px;
+            background-color: #555;
+            color: white;
+            border-radius: 24PX;
+            margin: 10px;
+        }
+        #add_btn{
+            border: none;
+            background-color: #464545;
+            color: white;
+            padding: 5px 10px;
+            font-weight: 500;
+            border-radius: 20px;
+        }
+        .task-list{
+            text-align: center;
+        }
+
+        .task-list li{
+            color: white;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="warapper">
+        <div id="main">  
+         <h1>To Do List Manager</h1>
+        <div class="inp_div">
+    <input type="text"/>
+    <button id="add_btn">Add</button>
+</div>
+</div>
+</div>
+ 
+<ul class="task-list">
+
+
+</ul>
+</body>
+<script src="ToDolist.js"></script>
+</html>

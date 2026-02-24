@@ -64,4 +64,3 @@ document.cookie = "user = demo; max-age = 10"; // 10 sec
 
 // date and time
 document.cookie = "age = 10; expires = wed, 20 Feb 2026 12:00:00 GMT"
-
