@@ -16,3 +16,73 @@ function abc() {
 abc();
 
 // method context
+let obj = {
+    name: "test",
+    sayName: function () {
+        console.log("this", this);
+        console.log(this.name);
+    }, // method --> ek function je koi object ni under hoy tene method kevaay. // this --> give object
+
+    // if you use arrow function then this key give you windows object because arrow function does not have its own this keyword it takes this value from its parent scope
+
+    // if you create one more function inside method then this loose their value --> soluation --> you have to create a arrow function
+};
+obj.sayName();
+
+// method -- arrow function
+let obj1 = {
+    name: "test1",
+    sayName: () => {
+            console.log("this arrow fnc", this);
+        },
+    };
+obj1.sayName();
+
+// method -- fnc info fnc
+let obj2 = {
+    name: "test 2",
+    sayName: function () {
+        function abc1() {
+            console.log("this fnc into fnc", this);
+        }
+        abc1();
+    },
+};
+obj2.sayName();
+
+// arrow function and lexical this 
+// arrow function does not have its own this keyword it takes this value from its parent value
+let obj4 = {
+    name: "john",
+    sayName: function () {
+        console.log(this); // metohd --> ek function je koi object ni under hoy tene method kevaay. // this --> give object
+        let abc = () => {
+            console.log(this); // arrow function does not have its own this keyword it takes this value from its parent scope
+        };
+        abc();
+    },
+};
+obj4.sayName();
+
+// Manual Binding
+// call, apply, bind
+// function call karti vakhate this keyword ni value set karva mate call, apply, bind method no upyog kariye chhiye
+
+let obj5 = {
+    name: "test10",
+    email: "a@a.com",
+}; // save this obj. into this keyword
+
+function temp_a() {
+    console.log(this);
+}
+// function.call(object_name) --> thsi keyword ni value set karva mate call method no upyog kariye chhiye
+temp_a.call(obj5);
+
+// function.call(object_name) --> thsi keyword ni value set karva mate apply method no upyog kariye chhiye
+
+temp_a.call(obj5);
+// function.call(object_name) --> thsi keyword ni value set karva mate bind method no upyog kariye chhiye
+let fnc = temp_a.bind(obj5); // blank object create
+fnc();
+// console.log(fnc);
