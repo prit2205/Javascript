@@ -75,3 +75,31 @@ class CreatPen {
 let pen1 = new CreatPen("Pne1", 5, "blue", "cello");
 let pen2 = new CreatPen("Pne2", 10, "red", "shino");
 let pen3 = new CreatPen("Pne3", 15, "yellow", "chatgpt");
+
+// extends
+// create a new class that hold old class value and aslo have some new values
+// copy old class and add new value
+
+class User {
+    constructor(name, email, age){
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.role = "user";
+
+        console.log(this)
+    }
+}
+
+let u1 = new User("test", "test@gmail.com", 25);
+let u2 = new User("Demo", "Dem@gmail.com", 20);
+
+class Admin extends User {
+    constructor(name, email, age){
+        super(name, email, age); // je class extends kariye tenu constructoer aetle super -- user nu constructor --> super
+        this.role = "admin";
+        console.log(this);
+    }
+}
+
+let admin = new Admin("admin", "admin@test.com", 25);
