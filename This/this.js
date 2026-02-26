@@ -86,3 +86,32 @@ temp_a.call(obj5);
 let fnc = temp_a.bind(obj5); // blank object create
 fnc();
 // console.log(fnc);
+
+// event context
+let h1 = document.querySelector("h1");
+h1.addEventListener("click", function () {
+    console.log(this);
+});
+// fnc --> h1(html element)
+// arrow fnc --> window
+
+// class context
+class Person {
+    constructor() {
+    console.log(this);
+    let user = "test";
+    }
+}
+
+let p1 = new Person(); // this value --> blank obj
+
+// context --> this value
+// global --> window
+// fnc --> window
+// method context fnc es5 --> object
+// method context arrow fnc es6 --> window
+// method context fnc es5 into fnc es5 --> window
+// method arrow fnc es6 into fnc es5 --> object
+// method arrow fnc es6 into arrow fnc es6 --> window
+// event context --> html element
+// class context --> blank object
