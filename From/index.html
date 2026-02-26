@@ -9,34 +9,50 @@
 <body class="bg-gradient-to-br from-blue-600 via-purple-100 to-pink-100 min-h-screen">
     
     <form class="bg-white backdrop-blur rounded-xl shadow-xl p-8 mb-12 w-full max-w-lg mx-auto mt-10 border-blue-100">
-        <h2>Add User</h2>
-        <div>
-            <label for="name">Name</label>
+
+        <h2 class="text-center text-4xl p-3 text-blue-950 font-semibold">Add User</h2>
+        
+        <div class="mb-s">
+            <label class="block text-gray-700 font-medium mb-2" for="name">Name</label>
             <input type="text" name="name" id="name" required
             class="w-full px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
         </div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required
+        <div class="mb-s">
+            <label class="block text-gray-700 font-medium mb-2"  for="role">Role</label>
+            <input type="text" name="role" id="role" required
             class="w-full px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
         </div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required
+        <div class="mb-s">
+            <label class="block text-gray-700 font-medium mb-2" for="bio">Bio</label>
+            <input type="text" name="bio" id="bio" required
             class="w-full px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
         </div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required
+        <div class="mb-s">
+            <label class="block text-gray-700 font-medium mb-2" for="photo">Photo URL</label>
+            <input type="text" name="photo" id="photo" required
             class="w-full px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
         </div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required
-            class="w-full px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
-        </div>
-    </form>
+
+        <button class="mt-4 w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 shadow-xl rounded-lg transition hover:to-blue-500 hover:from-purple-500 font-semibold" type="submit">Submit</button>
+         </form>
+
+        <div class="users grid grid-cols-1 md:grid-cols-3 gap-10 px-5">
+
+            <!-- user cards -->
+             <div class="card max-w-lg w-auto overflow-hidden border border-red-950 rounded-xl px-2 py-8 text-center shadow-xl">
+                <img src="https://i.pinimg.com/736x/53/23/6c/53236c495994801b2182c532eeb0b5cb.jpg" alt="image" class="max-w-[200px] max-h-[200px] rounded-full shadow-xl w-full h-full mx-auto my-0 mb-4"/>
+                <h2 class="text-3xl font-semibold text-red-950 pt-2">User Name</h2>
+                <p class="text-xl font-medium text-gray-500">Role</p>
+                <p class="text-lg font-semibold py-2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tenetur assumenda quidem officiis labore temporibus odio magni ipsa quibusdam eligendi eius amet maiores, atque ad sed esse vero repellendus sint.</p>
+             </div>
+            </div>
+       
+       
 
     <script src="script.js"></script>
 </body>
 </html>
+
+<button
+      

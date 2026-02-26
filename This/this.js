@@ -36,7 +36,7 @@ let obj1 = {
             console.log("this arrow fnc", this);
         },
     };
-obj1.sayName();
+obj1.sayName(); // this = windows
 
 // method -- fnc info fnc
 let obj2 = {
@@ -48,7 +48,7 @@ let obj2 = {
         abc1();
     },
 };
-obj2.sayName();
+obj2.sayName(); // this = window
 
 // arrow function and lexical this 
 // arrow function does not have its own this keyword it takes this value from its parent value
