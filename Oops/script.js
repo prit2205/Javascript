@@ -86,7 +86,10 @@ class User {
         this.email = email;
         this.age = age;
         this.role = "user";
+        // read profile
 
+        // wirte 
+        
         console.log(this)
     }
 }
@@ -99,6 +102,11 @@ class Admin extends User {
         super(name, email, age); // je class extends kariye tenu constructoer aetle super -- user nu constructor --> super
         this.role = "admin";
         console.log(this);
+
+        // show all user's name
+
+        // remove user's data
+
     }
 }
 
