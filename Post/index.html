@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Creation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <div class="main flex justify-center items-center mt-10 ">
+        <form class="bg-amber-100 px-6 py-4 rounded-2xl">
+        <label for="dp">Profile Image :</label>
+        <input class="block outline-none border-amber-800 border-2 rounded-xl px-4 py-2 mb-5" type="text" name="dp" id="dp" placeholder="profile pic">
+        <label for="name">Username :</label>
+        <input class="block outline-none border-amber-800 border-2 rounded-xl px-4 py-2 mb-5" type="text" name="name" id="name" placeholder="username">
+        <label for="post">Post :</label>
+        <input class="block outline-none border-amber-800 border-2 rounded-xl px-4 py-2 mb-5" type="url" name="post" id="post" placeholder="Image Link">
+        <label for="caption">Caption :</label>
+        <textarea 
+        name="caption" 
+        id="caption" 
+        placeholder="Write a Caption...."
+        cols="30" 
+        rows="5" 
+        class="border-2 border-amber-800 block px-6 py-4 rounded-xl px-4 py-2 mb-5">
+    </textarea>
+    <button class="submit w-full h-auto px-6 py-4 font-bold bg-amber-700 text-white rounded-xl">
+        Create Post
+    </button>
+    </form>
+    </div>
+
+    <div id="fncs">
+        <div id="add"></div>
+        <div id="remove"></div>
+        <div id="update"></div>
+    </div>
+
+    <div id="posts">
+        <div class="post w-1/4 h-auto rounded-3xl shadow-2xl hover:shadow-4xl hover:shadow-amber-700 border-2 border-amber-700 overflow-hidden transition-all">
+            <div class="bar flex items-center gap-5 bg-white/20 px-4 py-2">
+                <img src="https://i.pinimg.com/1200x/c1/7e/46/c17e466211ea49f0505e9174b9eb759b.jpg" alt="" class="w-16 h-16 rounded-full">
+                <h3 class="font-semibold text-xl text-black/80">Username</h3>
+                <p class="text-md font-semibold text-black/20">Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="main-img overflow-hidden w-full h-auto">
+                <img src="https://i.pinimg.com/736x/a2/6d/fb/a26dfb01812993cc3744eceda7b685b2.jpg" alt="Main Post" class="w-full h-full object-fit hover:scale-[1.5] transition-all">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

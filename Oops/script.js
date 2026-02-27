@@ -87,8 +87,30 @@ class User {
         this.age = age;
         this.role = "user";
         // read profile
+        this.profile = function () {
+            console.log(this);
+            // console.log({
+            //     name: this.name,
+            //     email: this.email,
+            //     age: this.age,
+            //     role: this.role,
+            // });
+            // return "user profile Fetched";
+        };
+        
+        // create a post
+        this.post = function (title, link) {
+            let caption = document.createElement("p");
+            caption.textContent = title;
+            caption.className = "text-2xl text-teal-950";
+            let img = document.createElement("img");
+            img.setAttribute("src", link);
+            img.className = "w-[200px] h-auto rounded-full  shadow-lg";
 
-        // wirte 
+            document.body.appendChild(caption);
+            document.body.appendChild(img);
+
+        };
         
         console.log(this)
     }
@@ -104,10 +126,37 @@ class Admin extends User {
         console.log(this);
 
         // show all user's name
-
-        // remove user's data
-
+        this.showUsers = function(users) {
+            // console.log(users);
+            return users;
+        };
     }
 }
 
 let admin = new Admin("admin", "admin@test.com", 25);
+console.log("Admin can See All Data");
+admin.showUsers({ user1: u1.profile(), user2: u2.profile() });
+
+// prototype inheritance vs classical inheritance
+// classical Inheritance -- create a classes and extands their classes
+
+// inheritance meaning --> class to class inheritance (copy one class into anthor class)
+
+// protoypeal inheritance --> object to object
+// ek object chhe tene tame all props/methods ne inhrit kari chho ke nava object ma
+
+let SoftDrink = {
+    color: "blue",
+    price: 50,
+    buy: function (company) {
+        console.log(
+            " == This Your Bill == : \n",
+            "Color" + this.color,
+            " \n price" + this.price,
+            "\n Company Name :" + company,
+        );
+    },
+};
+
+let BlueBerry = Object.create(SoftDrink);
+console.log(BlueBerry);
