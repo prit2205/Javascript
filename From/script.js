@@ -95,3 +95,4 @@ const userManagement = {
 };
 userManagement.init();
 userManagement.getFromLocalStorage();
+
