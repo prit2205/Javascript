@@ -117,3 +117,51 @@ ShowProfile("test", function (data) {
     });
 }); // callback hell
 
+// Promises: resolve and reject with then and catch
+// jyare tame ek promise banavo chho, tyare te promise be(two) states mathi koi ek state ma jase.
+// one state: resolve
+// second state: reject
+// and we have to write a code for both states
+let pr = new Promise(function (res, rej) {
+    setTimeout(() => {
+        let rnum = Math.floor(Math.random() * 10);
+        if (rnum < 5) {
+            res(rnum);
+        }else {
+            rej(rnum);
+        }
+    }, 3000);
+});
+
+pr.then(function (val) {
+    console.log("Resolve", val);
+}).catch(function (val) {
+    console.log("Reject", val);
+});
+
+// async await
+let pr1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let rnum = Math.floor(Math.random() * 10);
+        if (rnum < 5) {
+            resolve(rnum);
+        } else {
+            reject(rnum);
+        }
+    }, 2000);
+});
+
+async function abcd() {
+    try {
+        let val = await pr1; // wait for 2 seconds to resolve
+        console.log("async await", val);
+    }catch (err) {
+        console.log("rejected", err);
+    }
+}
+
+console.log(abcd());
+
+setTimeout(() => {
+    console.log(pr1);
+}, 2000);
