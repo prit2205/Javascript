@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- User Posts ==> JSON Placeholder API -->
+  <title>User Posts ==> JSON Placeholder API</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+  <style>
+
+    /* 3D Perspective */
+    .perspective{
+      perspective:1000px;
+    }
+
+    /* Card animation */
+    .preserve-3d{
+      transform-style:preserve-3d;
+      transition:transform .7s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* Flip on hover */
+    .group:hover .preserve-3d{
+      transform:rotateY(180deg);
+    }
+
+    /* Hide backface */
+    .backface-hidden{
+      backface-visibility:hidden;
+      -webkit-backface-visibility:hidden;
+    }
+
+    /* Rotate back side */
+    .rotate-y-180{
+      transform:rotateY(180deg);
+    }
+
+  </style>
+
+</head>
+
+<body class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 min-h-screen p-10 font-sans">
+
+
+  <!-- Users Grid -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 main">
+  </div>
+
+
+  <!-- JS File -->
+  <script src="script.js"></script>
+
+</body>
+</html>

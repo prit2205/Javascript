@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Recipe Directory - Flip Cards</title>
+
+    <style>
+        /* Flip Card Base Styles */
+        .perspective {
+            perspective: 1000px;
+        }
+
+        .preserve-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Front side starts visible */
+        .front {
+            backface-visibility: hidden;
+            z-index: 2;
+        }
+
+        /* Back side is hidden, rotated 180 degrees initially */
+        .back {
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            z-index: 1;
+        }
+
+        /* Rotate container on hover */
+        .group:hover .preserve-3d {
+            transform: rotateY(180deg);
+        }
+
+        /* Staggered text animation for the back face list items */
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .group:hover .animate-item {
+            animation: fadeSlideIn 0.5s ease-out forwards;
+        }
+    </style>
+
+</head>
+
+<body class="bg-slate-100 p-10 font-sans">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 main">
+
+
+        </div>
+    <script src="Recipes.js"></script>
+
+</body>
+
+</html>
