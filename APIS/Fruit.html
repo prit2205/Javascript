@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Nutrition Card</title>
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .nutrition-bar {
+            transition: width 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+
+        .group:hover .nutrition-bar {
+            width: var(--target-width);
+        }
+    </style>
+</head>
+
+<body class="bg-orange-50 flex justify-center items-center min-h-screen p-6">
+
+    <div class="main grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    </div>
+
+    <script src="Fruit.js"></script>
+
+</body>
+
+</html>
