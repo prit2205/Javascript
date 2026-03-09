@@ -1,0 +1,353 @@
+/* ========== CUSTOM STYLES ========== */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #faf8f5;
+}
+::-webkit-scrollbar-thumb {
+    background: #22c55e;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #16a34a;
+}
+
+/* ========== NAV STYLES ========== */
+.nav-link {
+    position: relative;
+    color: rgba(26, 26, 26, 0.6);
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #22c55e;
+    transition: width 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #15803d;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-scrolled {
+    background: rgba(250, 248, 245, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Inner pages: white navbar text over dark headers */
+.nav-inner .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+}
+.nav-inner .nav-link:hover,
+.nav-inner .nav-link.active {
+    color: #fff;
+}
+.nav-inner .nav-link.active::after {
+    background: #fff;
+}
+.nav-inner .nav-logo-text {
+    color: #fff;
+}
+.nav-inner .nav-social {
+    color: rgba(255, 255, 255, 0.6);
+}
+.nav-inner .nav-social:hover {
+    color: #fff;
+}
+.nav-inner .nav-cart {
+    color: #fff;
+}
+.nav-inner .nav-divider {
+    background: rgba(255, 255, 255, 0.2);
+}
+.nav-inner .nav-mobile-btn {
+    color: #fff;
+}
+
+/* When scrolled, revert to dark text */
+.nav-inner.nav-scrolled .nav-link {
+    color: rgba(26, 26, 26, 0.6);
+}
+.nav-inner.nav-scrolled .nav-link:hover,
+.nav-inner.nav-scrolled .nav-link.active {
+    color: #15803d;
+}
+.nav-inner.nav-scrolled .nav-link.active::after {
+    background: #22c55e;
+}
+.nav-inner.nav-scrolled .nav-logo-text {
+    color: #1a1a1a;
+}
+.nav-inner.nav-scrolled .nav-social {
+    color: rgba(26, 26, 26, 0.6);
+}
+.nav-inner.nav-scrolled .nav-social:hover {
+    color: #16a34a;
+}
+.nav-inner.nav-scrolled .nav-cart {
+    color: #1a1a1a;
+}
+.nav-inner.nav-scrolled .nav-divider {
+    background: rgba(26, 26, 26, 0.1);
+}
+.nav-inner.nav-scrolled .nav-mobile-btn {
+    color: #1a1a1a;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.animate-fadeInRight {
+    animation: fadeInRight 1s ease forwards;
+    opacity: 0;
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* ========== SCROLL REVEAL ========== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== PRODUCT CARDS ========== */
+.product-card {
+    transition: transform 0.4s ease;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ========== CATEGORY CARDS ========== */
+.category-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== REVIEW CARDS ========== */
+.review-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid transparent;
+}
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.2);
+}
+
+/* ========== SHOP PAGE ========== */
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1.5px solid rgba(26, 26, 26, 0.1);
+    color: rgba(26, 26, 26, 0.6);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.filter-btn:hover,
+.filter-btn.active {
+    background: #22c55e;
+    color: white;
+    border-color: #22c55e;
+}
+
+/* ========== ABOUT PAGE ========== */
+.value-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.team-card {
+    transition: transform 0.4s ease;
+}
+.team-card:hover {
+    transform: translateY(-8px);
+}
+.team-card:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+.team-social {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* ========== CONTACT PAGE ========== */
+.contact-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1.5px solid rgba(26, 26, 26, 0.1);
+    border-radius: 12px;
+    background: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.form-input:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+}
+.form-input::placeholder {
+    color: rgba(26, 26, 26, 0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ========== PAGE HEADER SHARED ========== */
+.page-header {
+    background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #166534 100%);
+    position: relative;
+    overflow: hidden;
+}
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+}
+
+/* ========== LOADING SHIMMER ========== */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}

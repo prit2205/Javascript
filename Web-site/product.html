@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Details — Plantopia</title>
+    <meta name="description" content="View detailed plant information, care guides, and customer reviews at Plantopia.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'plant': {50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#22c55e',600:'#16a34a',700:'#15803d',800:'#166534',900:'#14532d',950:'#052e16'}, 'cream':'#faf8f5','sand':'#f5f0e8','dark':'#1a1a1a','warm':'#8b7355' }, fontFamily: { 'display':['Playfair Display','serif'], 'body':['Inter','sans-serif'] } } } }
+    </script>
+</head>
+<body class="font-body bg-cream text-dark overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 nav-inner">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 bg-plant-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fa-solid fa-leaf text-white text-lg"></i></div>
+                    <span class="font-display text-2xl font-bold nav-logo-text">Plantopia</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-sm font-semibold uppercase tracking-widest">Home</a>
+                    <a href="shop.html" class="nav-link active text-sm font-semibold uppercase tracking-widest">Shop</a>
+                    <a href="about.html" class="nav-link text-sm font-semibold uppercase tracking-widest">About</a>
+                    <a href="contact.html" class="nav-link text-sm font-semibold uppercase tracking-widest">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center gap-5">
+                    <a href="#" class="nav-social text-dark/60 hover:text-plant-600 transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="#" class="nav-social text-dark/60 hover:text-plant-600 transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    <a href="#" class="nav-social text-dark/60 hover:text-plant-600 transition-colors"><i class="fa-brands fa-pinterest text-lg"></i></a>
+                    <div class="nav-divider w-px h-6 bg-dark/10 mx-1"></div>
+                    <a href="cart.html" class="nav-cart relative text-dark hover:text-plant-600 transition-colors">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span class="cart-count absolute -top-2 -right-2 w-5 h-5 bg-plant-600 text-white text-xs rounded-full flex items-center justify-center font-bold hidden">0</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="nav-mobile-btn md:hidden text-dark text-2xl"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-cream z-50 transform translate-x-full transition-transform duration-500">
+            <div class="flex flex-col items-center justify-center h-full gap-8">
+                <button id="mobile-close-btn" class="absolute top-6 right-6 text-3xl"><i class="fa-solid fa-xmark"></i></button>
+                <a href="index.html" class="text-2xl font-display font-bold">Home</a>
+                <a href="shop.html" class="text-2xl font-display font-bold text-plant-700">Shop</a>
+                <a href="about.html" class="text-2xl font-display font-bold">About</a>
+                <a href="contact.html" class="text-2xl font-display font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header pt-32 pb-16 text-center relative">
+        <div class="relative z-10">
+            <div class="flex items-center justify-center gap-2 text-white/40 text-sm">
+                <a href="index.html" class="hover:text-plant-400 transition-colors">Home</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <a href="shop.html" class="hover:text-plant-400 transition-colors">Shop</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span id="breadcrumb-name" class="text-plant-400">Plant Name</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <!-- Product Image -->
+                <div class="scroll-reveal">
+                    <div class="relative rounded-3xl overflow-hidden bg-plant-50 aspect-square shadow-lg">
+                        <img id="product-image" src="" alt="" class="w-full h-full object-cover">
+                        <div id="product-badge" class="absolute top-5 left-5 text-white text-xs font-bold px-4 py-1.5 rounded-full hidden"></div>
+                        <button id="wishlist-btn" class="absolute top-5 right-5 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-red-50 transition-all duration-300 shadow-md">
+                            <i class="fa-regular fa-heart text-lg text-dark/60 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <!-- Thumbnail Gallery -->
+                    <div class="flex gap-3 mt-5">
+                        <div class="w-20 h-20 rounded-xl overflow-hidden border-2 border-plant-500 cursor-pointer opacity-100">
+                            <img id="thumb-1" src="" alt="Thumbnail" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-20 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-plant-500 cursor-pointer opacity-60 hover:opacity-100 transition-all">
+                            <img id="thumb-2" src="" alt="Thumbnail" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-20 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-plant-500 cursor-pointer opacity-60 hover:opacity-100 transition-all">
+                            <img id="thumb-3" src="" alt="Thumbnail" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="scroll-reveal" style="animation-delay:0.1s">
+                    <!-- Name & Rating -->
+                    <div class="mb-6">
+                        <span id="product-category" class="text-xs font-semibold text-plant-600 bg-plant-50 px-3 py-1 rounded-full uppercase tracking-widest">Indoor</span>
+                        <h1 id="product-name" class="font-display text-4xl md:text-5xl font-bold mt-4">Plant Name</h1>
+                        <p id="product-botanical" class="text-dark/40 text-lg mt-2 italic">Botanical Name</p>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="flex items-center gap-3 mb-6">
+                        <div id="product-stars" class="flex items-center gap-1 text-yellow-400">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span id="product-rating" class="font-semibold">4.8</span>
+                        <span class="text-dark/30">|</span>
+                        <span id="product-review-count" class="text-dark/50 text-sm">128 Reviews</span>
+                        <span class="text-dark/30">|</span>
+                        <span class="text-plant-600 text-sm font-medium"><i class="fa-solid fa-circle-check mr-1"></i>In Stock</span>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <span id="product-price" class="font-bold text-4xl text-plant-700">$45.99</span>
+                        <span id="product-old-price" class="text-xl text-dark/30 line-through hidden">$59.99</span>
+                        <span id="product-discount" class="bg-red-100 text-red-600 text-sm font-bold px-3 py-1 rounded-full hidden">-23% OFF</span>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mb-8">
+                        <h3 class="font-semibold text-lg mb-3">Description</h3>
+                        <p id="product-description" class="text-dark/60 leading-relaxed">
+                            Product description will appear here.
+                        </p>
+                    </div>
+
+                    <!-- Care Info -->
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="bg-plant-50 rounded-2xl p-4 text-center">
+                            <i class="fa-solid fa-sun text-yellow-500 text-xl mb-2"></i>
+                            <div id="care-light" class="text-sm font-semibold">Indirect Light</div>
+                            <div class="text-xs text-dark/40 mt-0.5">Light</div>
+                        </div>
+                        <div class="bg-blue-50 rounded-2xl p-4 text-center">
+                            <i class="fa-solid fa-droplet text-blue-500 text-xl mb-2"></i>
+                            <div id="care-water" class="text-sm font-semibold">Weekly</div>
+                            <div class="text-xs text-dark/40 mt-0.5">Watering</div>
+                        </div>
+                        <div class="bg-orange-50 rounded-2xl p-4 text-center">
+                            <i class="fa-solid fa-temperature-half text-orange-500 text-xl mb-2"></i>
+                            <div id="care-temp" class="text-sm font-semibold">65-85°F</div>
+                            <div class="text-xs text-dark/40 mt-0.5">Temperature</div>
+                        </div>
+                    </div>
+
+                    <!-- Size Selector -->
+                    <div class="mb-8">
+                        <h3 class="font-semibold text-sm mb-3 uppercase tracking-wider text-dark/60">Select Size</h3>
+                        <div class="flex gap-3">
+                            <button class="size-btn px-6 py-3 rounded-xl border-2 border-dark/10 text-sm font-medium hover:border-plant-600 hover:text-plant-600 transition-all">Small</button>
+                            <button class="size-btn active px-6 py-3 rounded-xl border-2 border-plant-600 bg-plant-50 text-plant-700 text-sm font-bold transition-all">Medium</button>
+                            <button class="size-btn px-6 py-3 rounded-xl border-2 border-dark/10 text-sm font-medium hover:border-plant-600 hover:text-plant-600 transition-all">Large</button>
+                        </div>
+                    </div>
+
+                    <!-- Quantity + Add to Cart -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <!-- Quantity -->
+                        <div class="flex items-center border-2 border-dark/10 rounded-xl overflow-hidden">
+                            <button id="qty-minus" class="w-14 h-14 flex items-center justify-center text-lg text-dark/50 hover:bg-plant-50 hover:text-plant-700 transition-colors">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input id="qty-input" type="number" value="1" min="1" max="99" class="w-16 h-14 text-center font-bold text-lg border-x-2 border-dark/10 outline-none bg-transparent">
+                            <button id="qty-plus" class="w-14 h-14 flex items-center justify-center text-lg text-dark/50 hover:bg-plant-50 hover:text-plant-700 transition-colors">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <!-- Add to Cart -->
+                        <button id="add-to-cart-btn" class="flex-1 bg-plant-600 text-white py-4 px-8 rounded-xl font-bold text-lg hover:bg-plant-700 transition-all duration-300 flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-plant-600/25 group">
+                            <i class="fa-solid fa-bag-shopping group-hover:scale-110 transition-transform"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Add to Cart Success -->
+                    <div id="cart-success" class="hidden mb-6 bg-plant-100 border border-plant-300 text-plant-800 rounded-xl p-4 text-center font-medium animate-fadeInUp">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Added to cart successfully!
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="border-t border-dark/5 pt-6">
+                        <h3 class="text-sm font-semibold text-dark/40 uppercase tracking-wider mb-4">Guaranteed Safe Checkout</h3>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <div class="flex items-center gap-2 bg-white border border-dark/10 rounded-lg px-4 py-2.5 hover:border-plant-400 transition-colors">
+                                <i class="fa-brands fa-cc-visa text-2xl text-blue-700"></i>
+                                <span class="text-xs font-medium text-dark/50">Visa</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-white border border-dark/10 rounded-lg px-4 py-2.5 hover:border-plant-400 transition-colors">
+                                <i class="fa-brands fa-cc-mastercard text-2xl text-red-600"></i>
+                                <span class="text-xs font-medium text-dark/50">Mastercard</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-white border border-dark/10 rounded-lg px-4 py-2.5 hover:border-plant-400 transition-colors">
+                                <i class="fa-brands fa-cc-paypal text-2xl text-blue-500"></i>
+                                <span class="text-xs font-medium text-dark/50">PayPal</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-white border border-dark/10 rounded-lg px-4 py-2.5 hover:border-plant-400 transition-colors">
+                                <i class="fa-brands fa-cc-amex text-2xl text-blue-400"></i>
+                                <span class="text-xs font-medium text-dark/50">Amex</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-white border border-dark/10 rounded-lg px-4 py-2.5 hover:border-plant-400 transition-colors">
+                                <i class="fa-brands fa-cc-apple-pay text-2xl text-dark"></i>
+                                <span class="text-xs font-medium text-dark/50">Apple Pay</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-white border border-dark/10 rounded-lg px-4 py-2.5 hover:border-plant-400 transition-colors">
+                                <i class="fa-brands fa-google-pay text-2xl text-dark/70"></i>
+                                <span class="text-xs font-medium text-dark/50">Google Pay</span>
+                            </div>
+                        </div>
+                        <!-- Trust badges -->
+                        <div class="flex flex-wrap gap-6 mt-5 text-sm text-dark/40">
+                            <span><i class="fa-solid fa-shield-halved text-plant-600 mr-1"></i> Secure Payment</span>
+                            <span><i class="fa-solid fa-truck text-plant-600 mr-1"></i> Free Shipping</span>
+                            <span><i class="fa-solid fa-rotate-left text-plant-600 mr-1"></i> 30-Day Returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="py-20 bg-sand" id="reviews-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <span class="text-plant-600 font-semibold text-sm uppercase tracking-widest">💬 Customer Reviews</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-3">What Others Say</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-10">
+                <!-- Reviews Summary -->
+                <div class="lg:col-span-2 scroll-reveal">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm">
+                        <div class="text-center mb-6">
+                            <div id="avg-rating" class="font-display text-6xl font-bold text-plant-700">4.8</div>
+                            <div id="avg-stars" class="flex items-center justify-center gap-1 text-yellow-400 text-xl mt-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p id="total-reviews" class="text-dark/40 text-sm mt-2">Based on 128 reviews</p>
+                        </div>
+                        <!-- Rating bars -->
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm font-medium w-6">5</span>
+                                <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
+                                <div class="flex-1 bg-dark/5 rounded-full h-2.5 overflow-hidden"><div class="bg-yellow-400 h-full rounded-full" style="width:78%"></div></div>
+                                <span class="text-sm text-dark/40 w-8">78%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm font-medium w-6">4</span>
+                                <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
+                                <div class="flex-1 bg-dark/5 rounded-full h-2.5 overflow-hidden"><div class="bg-yellow-400 h-full rounded-full" style="width:15%"></div></div>
+                                <span class="text-sm text-dark/40 w-8">15%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm font-medium w-6">3</span>
+                                <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
+                                <div class="flex-1 bg-dark/5 rounded-full h-2.5 overflow-hidden"><div class="bg-yellow-400 h-full rounded-full" style="width:5%"></div></div>
+                                <span class="text-sm text-dark/40 w-8">5%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm font-medium w-6">2</span>
+                                <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
+                                <div class="flex-1 bg-dark/5 rounded-full h-2.5 overflow-hidden"><div class="bg-yellow-400 h-full rounded-full" style="width:2%"></div></div>
+                                <span class="text-sm text-dark/40 w-8">2%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-sm font-medium w-6">1</span>
+                                <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
+                                <div class="flex-1 bg-dark/5 rounded-full h-2.5 overflow-hidden"><div class="bg-yellow-400 h-full rounded-full" style="width:0%"></div></div>
+                                <span class="text-sm text-dark/40 w-8">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews List -->
+                <div class="lg:col-span-3">
+                    <div id="reviews-list" class="space-y-6 scroll-reveal">
+                        <!-- Reviews will be injected here by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- WRITE A REVIEW -->
+            <div class="mt-16 max-w-3xl mx-auto scroll-reveal">
+                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm">
+                    <h3 class="font-display text-2xl font-bold mb-2">Write a Review</h3>
+                    <p class="text-dark/40 text-sm mb-8">Share your experience with this plant. Fields marked with <span class="text-red-500">*</span> are required.</p>
+
+                    <form id="review-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Your Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="review-name" placeholder="John Doe" class="form-input" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email Address <span class="text-red-500">*</span></label>
+                                <input type="email" id="review-email" placeholder="john@example.com" class="form-input" required>
+                            </div>
+                        </div>
+                        <!-- Star Rating -->
+                        <div>
+                            <label class="block text-sm font-medium mb-3">Your Rating <span class="text-red-500">*</span></label>
+                            <div id="star-rating" class="flex items-center gap-2">
+                                <i class="fa-regular fa-star text-2xl text-dark/20 cursor-pointer hover:text-yellow-400 transition-colors star-select" data-star="1"></i>
+                                <i class="fa-regular fa-star text-2xl text-dark/20 cursor-pointer hover:text-yellow-400 transition-colors star-select" data-star="2"></i>
+                                <i class="fa-regular fa-star text-2xl text-dark/20 cursor-pointer hover:text-yellow-400 transition-colors star-select" data-star="3"></i>
+                                <i class="fa-regular fa-star text-2xl text-dark/20 cursor-pointer hover:text-yellow-400 transition-colors star-select" data-star="4"></i>
+                                <i class="fa-regular fa-star text-2xl text-dark/20 cursor-pointer hover:text-yellow-400 transition-colors star-select" data-star="5"></i>
+                                <span id="rating-text" class="text-sm text-dark/40 ml-2">Click to rate</span>
+                            </div>
+                            <input type="hidden" id="review-rating" value="0">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Review Title</label>
+                            <input type="text" id="review-title" placeholder="Sum up your experience" class="form-input">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Your Review <span class="text-red-500">*</span></label>
+                            <textarea id="review-text" rows="4" placeholder="Tell others what you think about this plant..." class="form-input resize-none" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-plant-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-plant-700 transition-colors duration-300 flex items-center justify-center gap-2">
+                            Submit Review <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <!-- Review Success -->
+                    <div id="review-success" class="hidden mt-6 bg-plant-100 border border-plant-300 text-plant-800 rounded-xl p-4 text-center font-medium">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Thank you! Your review has been submitted successfully.
+                    </div>
+                    <!-- Review Error -->
+                    <div id="review-error" class="hidden mt-6 bg-red-50 border border-red-300 text-red-700 rounded-xl p-4 text-center font-medium">
+                        <i class="fa-solid fa-circle-exclamation mr-2"></i> Please fill in all required fields and select a rating.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-plant-950 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-white/10">
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-4"><div class="w-10 h-10 bg-plant-600 rounded-full flex items-center justify-center"><i class="fa-solid fa-leaf text-white"></i></div><span class="font-display text-2xl font-bold">Plantopia</span></a>
+                    <p class="text-white/50 text-sm">Bringing nature into your home since 2019.</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-plant-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-plant-600 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-plant-600 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-white/50 hover:text-plant-400 text-sm">Home</a></li>
+                        <li><a href="shop.html" class="text-white/50 hover:text-plant-400 text-sm">Shop</a></li>
+                        <li><a href="about.html" class="text-white/50 hover:text-plant-400 text-sm">About</a></li>
+                        <li><a href="contact.html" class="text-white/50 hover:text-plant-400 text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/50 text-sm"><i class="fa-solid fa-location-dot text-plant-400"></i>123 Green Ave, NY 10001</li>
+                        <li class="flex items-center gap-3 text-white/50 text-sm"><i class="fa-solid fa-phone text-plant-400"></i>+1 (555) 123-4567</li>
+                        <li class="flex items-center gap-3 text-white/50 text-sm"><i class="fa-solid fa-envelope text-plant-400"></i>hello@plantopia.com</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-white/30 text-sm text-center pt-8">&copy; 2026 Plantopia. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-plant-600 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-plant-700 transition-all opacity-0 translate-y-4 z-40"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="cart.js"></script>
+    <script src="product.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

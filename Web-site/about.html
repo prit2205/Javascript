@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us — Shoptipia</title>
+
+    <meta name="description"
+        content="Learn about Shoptipia's mission to deliver quality products and an amazing shopping experience.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d'
+                        },
+                        cream: '#faf8f5',
+                        sand: '#f5f0e8',
+                        dark: '#1a1a1a'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-body bg-cream text-dark overflow-x-hidden">
+
+    <!-- NAVBAR -->
+
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping text-green-600 text-xl"></i>
+                <span class="text-xl font-bold">Shoptipia</span>
+            </a>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="index.html" class="text-green-600">Home</a>
+                <a href="shop.html" class="hover:text-green-600">Shop</a>
+                <a href="about.html" class="hover:text-green-600">About</a>
+                <a href="contact.html" class="hover:text-green-600">Contact</a>
+            </div>
+            <a href="cart.html" class="relative">
+                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                <span class="absolute -top-2 -right-2 bg-green-600 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">3</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+
+    <section class="pt-32 pb-20 text-center bg-brand-700 text-white">
+
+        <span class="uppercase text-sm tracking-widest text-white/80">
+            Our Story
+        </span>
+
+        <h1 class="font-display text-5xl md:text-6xl font-bold mt-3">
+            About Shoptipia
+        </h1>
+
+        <p class="text-white/70 mt-4 max-w-lg mx-auto">
+            Your trusted online shopping destination
+        </p>
+
+    </section>
+
+    <!-- STORY -->
+
+    <section class="py-24 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
+                class="rounded-3xl shadow-xl w-full object-cover" />
+
+            <div>
+
+                <h2 class="font-display text-4xl font-bold">
+                    Our Journey
+                </h2>
+
+                <p class="text-dark/60 mt-6 leading-relaxed">
+
+                    Shoptipia was created with a simple vision — to make online shopping
+                    easy, reliable, and enjoyable. What began as a small digital store
+                    has grown into a platform trusted by thousands of customers.
+
+                </p>
+
+                <p class="text-dark/60 mt-4 leading-relaxed">
+
+                    We focus on delivering quality products, smooth shopping experiences,
+                    and reliable service for every customer.
+
+                </p>
+
+                <div class="grid grid-cols-3 gap-6 mt-10">
+
+                    <div class="text-center">
+
+                        <div class="text-3xl font-bold text-brand-700">
+                            500+
+                        </div>
+
+                        <div class="text-sm text-dark/50">
+                            Products
+                        </div>
+
+                    </div>
+
+                    <div class="text-center">
+
+                        <div class="text-3xl font-bold text-brand-700">
+                            20K+
+                        </div>
+
+                        <div class="text-sm text-dark/50">
+                            Customers
+                        </div>
+
+                    </div>
+
+                    <div class="text-center">
+
+                        <div class="text-3xl font-bold text-brand-700">
+                            99%
+                        </div>
+
+                        <div class="text-sm text-dark/50">
+                            Satisfaction
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VALUES -->
+
+    <section class="py-24 bg-sand">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+
+                <h2 class="font-display text-4xl md:text-5xl font-bold">
+                    Our Values
+                </h2>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="bg-white rounded-3xl p-8 text-center">
+
+                    <i class="fa-solid fa-shield text-3xl text-brand-600"></i>
+
+                    <h3 class="font-bold mt-4">Trust</h3>
+
+                    <p class="text-sm text-dark/60 mt-2">
+                        Reliable products and secure shopping.
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 text-center">
+
+                    <i class="fa-solid fa-star text-3xl text-brand-600"></i>
+
+                    <h3 class="font-bold mt-4">Quality</h3>
+
+                    <p class="text-sm text-dark/60 mt-2">
+                        Every product meets our quality standards.
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 text-center">
+
+                    <i class="fa-solid fa-users text-3xl text-brand-600"></i>
+
+                    <h3 class="font-bold mt-4">Community</h3>
+
+                    <p class="text-sm text-dark/60 mt-2">
+                        Thousands of happy customers worldwide.
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 text-center">
+
+                    <i class="fa-solid fa-truck text-3xl text-brand-600"></i>
+
+                    <h3 class="font-bold mt-4">Fast Delivery</h3>
+
+                    <p class="text-sm text-dark/60 mt-2">
+                        Quick and reliable delivery services.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-gray-900 text-white py-12">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <h3 class="text-xl font-bold mb-2">
+                Shoptipia
+            </h3>
+
+            <p class="text-gray-400 text-sm">
+                © 2026 Shoptipia. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us — Shoptipia</title>
+
+    <meta name="description"
+        content="Contact Shoptipia for support, orders, or partnerships. We're here to help you with your shopping experience.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d'
+                        },
+                        cream: '#faf8f5',
+                        sand: '#f5f0e8',
+                        dark: '#1a1a1a'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-body bg-cream text-dark overflow-x-hidden">
+
+    <!-- NAVBAR -->
+
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping text-green-600 text-xl"></i>
+                <span class="text-xl font-bold">Shoptipia</span>
+            </a>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="index.html" class="text-green-600">Home</a>
+                <a href="shop.html" class="hover:text-green-600">Shop</a>
+                <a href="about.html" class="hover:text-green-600">About</a>
+                <a href="contact.html" class="hover:text-green-600">Contact</a>
+            </div>
+            <a href="cart.html" class="relative">
+                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                <span class="absolute -top-2 -right-2 bg-green-600 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">3</span>
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="pt-32 pb-20 text-center bg-brand-700 text-white">
+
+        <span class="uppercase text-sm tracking-widest text-white/80">
+            Get In Touch
+        </span>
+
+        <h1 class="font-display text-5xl md:text-6xl font-bold mt-3">
+            Contact Shoptipia
+        </h1>
+
+        <p class="text-white/70 mt-4 max-w-lg mx-auto">
+            We're here to help with orders, support, or partnerships.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT CARDS -->
+
+    <section class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="bg-brand-50 rounded-3xl p-8 text-center">
+
+                <i class="fa-solid fa-location-dot text-3xl text-brand-600"></i>
+
+                <h3 class="font-display font-bold text-lg mt-4">
+                    Office
+                </h3>
+
+                <p class="text-dark/50 text-sm mt-2">
+                    Ahmedabad, India
+                </p>
+
+            </div>
+
+
+            <div class="bg-brand-50 rounded-3xl p-8 text-center">
+
+                <i class="fa-solid fa-phone text-3xl text-brand-600"></i>
+
+                <h3 class="font-display font-bold text-lg mt-4">
+                    Call Us
+                </h3>
+
+                <p class="text-dark/50 text-sm mt-2">
+                    +91 90000 00000
+                </p>
+
+            </div>
+
+
+            <div class="bg-brand-50 rounded-3xl p-8 text-center">
+
+                <i class="fa-solid fa-envelope text-3xl text-brand-600"></i>
+
+                <h3 class="font-display font-bold text-lg mt-4">
+                    Email
+                </h3>
+
+                <p class="text-dark/50 text-sm mt-2">
+                    support@shoptipia.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT FORM -->
+
+    <section class="pb-20 bg-white">
+
+        <div class="max-w-3xl mx-auto px-6">
+
+            <h2 class="text-3xl font-bold text-center mb-10">
+                Send us a message
+            </h2>
+
+            <form class="space-y-6">
+
+                <input type="text" placeholder="Full Name" class="w-full border rounded-lg p-4">
+
+                <input type="email" placeholder="Email Address" class="w-full border rounded-lg p-4">
+
+                <input type="text" placeholder="Subject" class="w-full border rounded-lg p-4">
+
+                <textarea rows="5" placeholder="Your Message" class="w-full border rounded-lg p-4"></textarea>
+
+                <button class="w-full bg-brand-600 text-white py-4 rounded-lg font-semibold hover:bg-brand-700">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bg-gray-900 text-white py-12 text-center">
+
+        <h3 class="text-xl font-bold mb-2">
+            Shoptipia
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+            © 2026 Shoptipia. All rights reserved.
+        </p>
+
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop All Products — Shoptipia</title>
+
+    <meta name="description" content="Browse products on Shoptipia">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body class="font-[Inter] bg-gray-50 text-gray-800 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <a href="index.html" class="flex items-center gap-2">
+
+                <i class="fa-solid fa-bag-shopping text-green-600 text-xl"></i>
+
+                <span class="text-xl font-bold">Shoptipia</span>
+
+            </a>
+
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+
+                <a href="index.html" class="hover:text-green-600">Home</a>
+                <a href="shop.html" class="text-green-600">Shop</a>
+                <a href="about.html" class="hover:text-green-600">About</a>
+                <a href="contact.html" class="hover:text-green-600">Contact</a>
+
+            </div>
+
+            <a href="cart.html" class="relative">
+
+                <i class="fa-solid fa-bag-shopping text-lg"></i>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="pt-28 pb-14 text-center">
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-3">
+
+            Shop All Products
+
+        </h1>
+
+        <p class="text-gray-500 max-w-lg mx-auto">
+
+            Browse the full collection available on Shoptipia
+
+        </p>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <section class="pb-12">
+
+        <div class="max-w-xl mx-auto px-6 relative">
+
+            <input type="text" id="shop-search" placeholder="Search products..."
+                class="w-full bg-white border border-gray-200 rounded-xl py-4 px-5 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
+
+            <i class="fa-solid fa-magnifying-glass absolute right-10 top-1/2 -translate-y-1/2 text-gray-400"></i>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY FILTER -->
+
+    <section class="pb-12">
+
+        <div id="category-container" class="flex flex-wrap items-center justify-center gap-3 px-6">
+
+            <button class="filter-btn bg-green-600 text-white px-4 py-2 rounded-full" data-category="all">
+
+                All Products
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS GRID -->
+
+    <section class="pb-20">
+
+        <div id="shop-grid"
+            class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+            <!-- Products will load dynamically here -->
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bg-black text-white py-10">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <h3 class="text-lg font-semibold mb-2">Shoptipia</h3>
+
+            <p class="text-gray-400 text-sm">
+
+                © 2026 Shoptipia. All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JS FILES -->
+
+    <script src="shop.js"></script>
+    <script src="cart.js"></script>
+
+</body>
+
+</html>
